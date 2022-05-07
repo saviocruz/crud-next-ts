@@ -1,0 +1,2420 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "BD",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 0,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 2,
+      "nome": "WILDFLY/JBOSS",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 0,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 3,
+      "nome": "SRH-SOLUÇÃO",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 1,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 4,
+      "nome": "SQL",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 1,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 5,
+      "nome": "admacesso",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 1,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 6,
+      "nome": "oracle",
+      "sigla": null,
+      "ativo": "NAO",
+      "categoriaId": 1,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 7,
+      "nome": "Grant",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 1,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 8,
+      "nome": "SRH2",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 5,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 9,
+      "nome": "SADP",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 1,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 10,
+      "nome": "Schemas Diversos",
+      "sigla": null,
+      "ativo": "NAO",
+      "categoriaId": 2,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 11,
+      "nome": "Script jboss-cli",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 2,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 12,
+      "nome": "Segurança",
+      "sigla": "SEG",
+      "ativo": "SIM",
+      "categoriaId": 5,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 13,
+      "nome": "SERVIDORES",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 0,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 14,
+      "nome": "Linux",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 13,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 15,
+      "nome": "Oracle",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 13,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 16,
+      "nome": "Serviços",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 13,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 17,
+      "nome": "Folha",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 1,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 18,
+      "nome": "ROTEIRO",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 0,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 19,
+      "nome": "Ferramentas",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 18,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 20,
+      "nome": "Sistemas",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 18,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 21,
+      "nome": "adm",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 1,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 22,
+      "nome": "CHAVES",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 0,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 23,
+      "nome": "mt1",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 22,
+      "restrito": "SIM",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 24,
+      "nome": "mt2",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 22,
+      "restrito": "SIM",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 25,
+      "nome": "Servidores de Aplicação",
+      "sigla": 0,
+      "ativo": "SIM",
+      "categoriaId": 15,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 26,
+      "nome": "Acesso",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 18,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 27,
+      "nome": "Projetos",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 18,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 28,
+      "nome": "Certificado",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 18,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 29,
+      "nome": "MacBook",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 22,
+      "restrito": "SIM",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 30,
+      "nome": "Postgres",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 1,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 31,
+      "nome": "Diversos",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 22,
+      "restrito": "SIM",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 32,
+      "nome": "GERENCIAMENTO",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": null,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 33,
+      "nome": "Gerenciamento do Software",
+      "sigla": "GER",
+      "ativo": "SIM",
+      "categoriaId": 32,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020",
+      "categoria": {}
+    },
+    {
+      "id": 34,
+      "nome": "Sustentação e mudanças",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 33,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 35,
+      "nome": "Informações Gerais",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 33,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 36,
+      "nome": "Documentação",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 33,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 37,
+      "nome": "Projeto",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 33,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 38,
+      "nome": "Partes Interessadas",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 35,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 39,
+      "nome": "Arquitetura",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 35,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 40,
+      "nome": "Requisitos",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 36,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 41,
+      "nome": "Escopo",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 35,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 42,
+      "nome": "Perfis e Usuários",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 35,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 43,
+      "nome": "Requisitos Não funcionais",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 35,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 44,
+      "nome": "Modelos de Dados",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 35,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 45,
+      "nome": "Cronograma",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 35,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 46,
+      "nome": "Roteiro e Manuais",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 35,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 47,
+      "nome": "Casos de Uso.",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 36,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 48,
+      "nome": "Reuniões de Projeto",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 37,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 49,
+      "nome": "Solicitação de Demanda",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 37,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 50,
+      "nome": "Gerenciamento de Banco de Dados",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 32,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 51,
+      "nome": "Histórico",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 50,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 52,
+      "nome": "Itens de Configuraçao",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 50,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 53,
+      "nome": "Jobs",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 52,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 54,
+      "nome": "DataBaseLinks",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 52,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 55,
+      "nome": "Sinônimos",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 52,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 56,
+      "nome": "Materialized Views",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 52,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 57,
+      "nome": "Gerenciamento de Serviços de TIC",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 32,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 58,
+      "nome": "Gerenciamento de Infraestrutura de TIC",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 32,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 59,
+      "nome": "TAP",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 37,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 60,
+      "nome": "TEP",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 37,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 61,
+      "nome": "Regras de Negócio",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 36,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 62,
+      "nome": "Cadastro de Eleitores",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 1,
+      "restrito": "SIM",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 63,
+      "nome": "MySQL",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 1,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 64,
+      "nome": "MySql",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 22,
+      "restrito": "SIM",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 65,
+      "nome": "BI",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": null,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 66,
+      "nome": "Painel",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 65,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 67,
+      "nome": "Extração",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 65,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 68,
+      "nome": "BANCO DE DADOS.",
+      "sigla": null,
+      "ativo": "NAO",
+      "categoriaId": 1,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 77,
+      "nome": "DBA",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 1,
+      "restrito": "SIM",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 78,
+      "nome": "Scripts SQL",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 1,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 79,
+      "nome": "Reunião",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 36,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 80,
+      "nome": "apex",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 68,
+      "restrito": "SIM",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 81,
+      "nome": "apex",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 68,
+      "restrito": "SIM",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 82,
+      "nome": "Aplicação web",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": null,
+      "restrito": "SIM",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 83,
+      "nome": "Computador",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 179,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 84,
+      "nome": "Serviços de E-Mail",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 181,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 85,
+      "nome": "Certificados",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 181,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 86,
+      "nome": "Software comerciais",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 178,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 87,
+      "nome": "Eleitoral",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 180,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 88,
+      "nome": "Servidores em Geral",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 181,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 89,
+      "nome": "Períféricos",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 179,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 90,
+      "nome": "Banco de Dados",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 181,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 91,
+      "nome": "Serviço",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 2,
+      "restrito": "SIM",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 92,
+      "nome": "Sistema Operacional",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 86,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 93,
+      "nome": "Servidor de Armazenamento",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 181,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 94,
+      "nome": "Internet",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 180,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 95,
+      "nome": "Serviços de Rede",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 181,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 96,
+      "nome": "Qualidade",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 37,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 97,
+      "nome": "Implantação",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 37,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 98,
+      "nome": "Pós-Implantação",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 37,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 178,
+      "nome": "CATALOGO SERVIÇO",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": null,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 179,
+      "nome": "Hardware",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 178,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 180,
+      "nome": "Sistemas Corporativos",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 178,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 181,
+      "nome": "Infraestrutura",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 178,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 182,
+      "nome": "Impressora",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 179,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 183,
+      "nome": "Servidor de Aplicação",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 181,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 184,
+      "nome": "Administrativos",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 180,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 185,
+      "nome": "Judiciais",
+      "sigla": null,
+      "ativo": "SIM",
+      "categoriaId": 180,
+      "restrito": "NAO",
+      "criado_em": "01/01/2020"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Modelo Padrão",
+      "description": "Descreve elementos fundamentais",
+      "created_on": "01/03/2023"
+    },
+    {
+      "id": "2",
+      "title": "Saida de emergencia",
+      "description": "descrito",
+      "created_on": "01/02/2022"
+    },
+    {
+      "title": "Modelo semelhante",
+      "description": "Segue modelo padronizado",
+      "id": "egW4zx5"
+    },
+    {
+      "title": "Quarks",
+      "description": "",
+      "id": "TK3IKHF"
+    }
+  ],
+  "dominios": [
+    {
+      "id": 1,
+      "nome": "SOLUCÃO",
+      "ativo": "SIM",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 2,
+      "nome": "SOFTWARE.",
+      "ativo": "SIM",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 3,
+      "nome": "RECURSOS",
+      "ativo": "NAO",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 4,
+      "nome": "CATALOGO",
+      "ativo": "SIM",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 5,
+      "nome": "VARIAVEL",
+      "ativo": "SIM",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 6,
+      "nome": "SQL",
+      "ativo": "SIM",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 7,
+      "nome": "URL_JDBC",
+      "ativo": "SIM",
+      "criado_em": "01/01/2020"
+    }
+  ],
+  "itens": [
+    {
+      "id": 1,
+      "id_dominio": 5,
+      "nome": "wildfly_home",
+      "descricao": "Locais onde instancias do wildly estão instaladas",
+      "ativo": "SIM",
+      "tipo": "ENU",
+      "informacao": "/opt/wildfly;/opt/wildfly-12",
+      "legenda": "WILDFLY_HOME",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 2,
+      "id_dominio": 5,
+      "nome": "schemaDS",
+      "descricao": "Seleciona o schema relacionado ao datarouce a ser criado",
+      "ativo": "SIM",
+      "tipo": "SQL",
+      "informacao": "select schema SCHEMADS, schema from acessoweb.SBD_CREDENCIAL  order by schema ",
+      "legenda": "Nome do schema",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 3,
+      "id_dominio": 5,
+      "nome": "recurso",
+      "descricao": "Nome da datsource nos servers",
+      "ativo": "SIM",
+      "tipo": "SQL",
+      "informacao": "Select id, nome from admportfolio.recurso r where r.tiporecurso_id = 3 order by nome",
+      "legenda": null,
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 4,
+      "id_dominio": 5,
+      "nome": "unidadeTSE",
+      "descricao": "Informe a unidade relacionada",
+      "ativo": "SIM",
+      "tipo": "SQL",
+      "informacao": "Select sigla_unid_tse SIGLA, sigla_unid_tse from srh2.unidade_tse u where u.DT_FIM_VIGENCIA is null order by sigla_unid_tse",
+      "legenda": "Unidade",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 5,
+      "id_dominio": 5,
+      "nome": "usuarioBancoAdmAcesso",
+      "descricao": "Usuários que estao no banco e nao no admacesso. Não considera schemas ADM e WEB",
+      "ativo": "SIM",
+      "tipo": "SQL",
+      "informacao": "SELECT\r\n        username, username\r\n    FROM\r\n        ALL_USERS U\r\n    WHERE\r\n        username not in (select cd_usuario from admacesso.usuario) and username not like 'WEB%' AND username not like 'ADM%'",
+      "legenda": null,
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 6,
+      "id_dominio": 5,
+      "nome": "cria_usuario_banco",
+      "descricao": "Informe se deseja criar o usuário de banco",
+      "ativo": "SIM",
+      "tipo": "ENU",
+      "informacao": "SIM;NAO",
+      "legenda": "Criar usuário no banco ?",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 7,
+      "id_dominio": 6,
+      "nome": "new-connection-sql",
+      "descricao": null,
+      "ativo": "SIM",
+      "tipo": null,
+      "informacao": "BEGIN EXECUTE IMMEDIATE 'ALTER SESSION SET NLS_COMP=LINGUISTIC'; EXECUTE IMMEDIATE 'ALTER SESSION SET NLS_SORT=BINARY_AI'; END;",
+      "legenda": null,
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 8,
+      "id_dominio": 7,
+      "nome": "ADM",
+      "descricao": "Instancia do Oracle principal",
+      "ativo": "SIM",
+      "tipo": null,
+      "informacao": "10.18.1.1:1521:adm",
+      "legenda": null,
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 9,
+      "id_dominio": 7,
+      "nome": "TSE_EXADATA",
+      "descricao": "Servidor de dados no TSE",
+      "ativo": "SIM",
+      "tipo": null,
+      "informacao": "exadata03-scan.tse.jus.br:1521/eleicao_exacc03.tse",
+      "legenda": null,
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 10,
+      "id_dominio": 7,
+      "nome": "TSE POSTGRES",
+      "descricao": "Banco de dados Oracle PJE / TSE",
+      "ativo": "SIM",
+      "tipo": null,
+      "informacao": "pjebdmt-01.tse.jus.br:5444/pje",
+      "legenda": null,
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 20,
+      "id_dominio": 5,
+      "nome": "servidores",
+      "descricao": "Lista de servidores ATIVO",
+      "ativo": "SIM",
+      "tipo": "SQL",
+      "informacao": "select nome from srh2.servidor where cd_si_func = 6",
+      "legenda": "Servidores",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 21,
+      "id_dominio": 5,
+      "nome": "requisitados",
+      "descricao": "Requisitados",
+      "ativo": "SIM",
+      "tipo": "SQL",
+      "informacao": "select * from srh2.req_servidor",
+      "legenda": "Requisitados",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 22,
+      "id_dominio": 5,
+      "nome": "ativo_inativo",
+      "descricao": "Ativo ou Inativo",
+      "ativo": "SIM",
+      "tipo": "ENU",
+      "informacao": "ATIVO;INATIVO",
+      "legenda": "Ativo ou Inativo",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 23,
+      "id_dominio": 5,
+      "nome": "NomeUsuario",
+      "descricao": "Informe o nome do usuário",
+      "ativo": "SIM",
+      "tipo": "INP",
+      "informacao": ".",
+      "legenda": "Nome do usuário",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 24,
+      "id_dominio": 5,
+      "nome": "id_url",
+      "descricao": "Informe a url do banco associado",
+      "ativo": "SIM",
+      "tipo": "SQL",
+      "informacao": "select id, nome from acessoweb.adm_dominio_item where id_dominio = 7",
+      "legenda": "URL Banco",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 25,
+      "id_dominio": 5,
+      "nome": "id_sql",
+      "descricao": "Comando inicial ao criar o pool DS",
+      "ativo": "SIM",
+      "tipo": "SQL",
+      "informacao": "select id, SUBSTR(informacao, 0, 20) from acessoweb.adm_dominio_item where id_dominio = 6",
+      "legenda": "new-connection-sql",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 26,
+      "id_dominio": 5,
+      "nome": "WFDomainHostController",
+      "descricao": "Selecione o host que deseja executar o comando ",
+      "ativo": "SIM",
+      "tipo": "ENU",
+      "informacao": "mt-hc-01;mt-hc-02;mt-hc-02",
+      "legenda": "Host Controller",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 27,
+      "id_dominio": 5,
+      "nome": "WFDomainInstanceController",
+      "descricao": "Informe qual instancia deseja executar o comando",
+      "ativo": "SIM",
+      "tipo": "ENU",
+      "informacao": "apps-01;apps-02;apps-03;apps-04;apps-05;",
+      "legenda": "Instancia do Cluster",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 28,
+      "id_dominio": 5,
+      "nome": "datasource",
+      "descricao": "Nome do data source no servidor de aplicação",
+      "ativo": "SIM",
+      "tipo": "SQL",
+      "informacao": "select datasource datasourceDS, datasource from acessoweb.SBD_CREDENCIAL order by datasource ",
+      "legenda": "Data sources",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 29,
+      "id_dominio": 5,
+      "nome": "hostWF",
+      "descricao": "O ip onde se executar o comando ",
+      "ativo": "SIM",
+      "tipo": "ENU",
+      "informacao": "10.18.1.57;10.18.1.153;10.18.1.166",
+      "legenda": "IP do servidor",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 30,
+      "id_dominio": 5,
+      "nome": "portaWF",
+      "descricao": "Porta que conecta ao manager do WF",
+      "ativo": "SIM",
+      "tipo": "ENU",
+      "informacao": "9990;9993;10493",
+      "legenda": "Porta manager",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 31,
+      "id_dominio": 5,
+      "nome": "cria_usuario_sei",
+      "descricao": "Informe se deseja criar o usuário no SEI",
+      "ativo": "SIM",
+      "tipo": "ENU",
+      "informacao": "NAO;SIM",
+      "legenda": "Criar usuário no SEI ?",
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 32,
+      "id_dominio": 5,
+      "nome": "cpf_novo_usuario",
+      "descricao": "Informe o CPF do usuário",
+      "ativo": "SIM",
+      "tipo": null,
+      "informacao": ".",
+      "legenda": null,
+      "tamanho": null,
+      "criado_em": "01/01/2020"
+    }
+  ],
+  "metadados": [
+    {
+      "id": 1,
+      "id_dominio": 5,
+      "nome": "TIPO",
+      "descricao": "Tipo de campo",
+      "ativo": "SIM",
+      "tipo": "ENU",
+      "informacao": "ENU;SQL;WRWERWREWERWWE",
+      "legenda": "Tipo de campo",
+      "obrigatorio": "SIM",
+      "ordem": 5,
+      "tamanho": "8",
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 2,
+      "id_dominio": 5,
+      "nome": "LEGENDA",
+      "descricao": "Legenda",
+      "ativo": "NAO",
+      "tipo": "INP",
+      "informacao": "Legenda do nome",
+      "legenda": "Legenda.",
+      "obrigatorio": "SIM",
+      "ordem": "2",
+      "tamanho": 20,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 3,
+      "id_dominio": 5,
+      "nome": "OBRIGATORIO",
+      "descricao": "Obrigatório",
+      "ativo": "SIM",
+      "tipo": "ENU",
+      "informacao": ":Selecione;SIM,SIM;NAO,NAO",
+      "legenda": "Obrigatório",
+      "obrigatorio": "SIM",
+      "ordem": 3,
+      "tamanho": 10,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 4,
+      "id_dominio": null,
+      "nome": "Placeholder",
+      "descricao": null,
+      "ativo": "SIM",
+      "tipo": null,
+      "informacao": "ERWEREW",
+      "legenda": null,
+      "obrigatorio": "NAO",
+      "ordem": 4,
+      "tamanho": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 5,
+      "id_dominio": 5,
+      "nome": "PLACEHOLEDR",
+      "descricao": "place",
+      "ativo": "SIM",
+      "tipo": "INP",
+      "informacao": ".SDSD",
+      "legenda": "Placeholder",
+      "obrigatorio": "NAO",
+      "ordem": 4,
+      "tamanho": 90,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 6,
+      "id_dominio": null,
+      "nome": "placehoslder",
+      "descricao": null,
+      "ativo": "NAO",
+      "tipo": "ENU",
+      "informacao": "NADA",
+      "legenda": "place",
+      "obrigatorio": "NAO",
+      "ordem": 4,
+      "tamanho": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 7,
+      "id_dominio": 5,
+      "nome": "VALIDADOR",
+      "descricao": null,
+      "ativo": "SIM",
+      "tipo": "INP",
+      "informacao": "Campo com querys de validação",
+      "legenda": "Query validação",
+      "obrigatorio": "NAO",
+      "ordem": 7,
+      "tamanho": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 8,
+      "id_dominio": 5,
+      "nome": "RESPOSTA",
+      "descricao": null,
+      "ativo": "SIM",
+      "tipo": "INP",
+      "informacao": "respostas",
+      "legenda": "Resposta Validação",
+      "obrigatorio": "NAO",
+      "ordem": 6,
+      "tamanho": "8",
+      "criado_em": "01/01/2020"
+    }
+  ],
+  "dominios_itens_valores": [
+    {
+      "id": 1,
+      "id_dominio_item": 23,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Nome Completo",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 2,
+      "id_dominio_item": 23,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 3,
+      "id_dominio_item": 23,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": "seja esperto",
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 4,
+      "id_dominio_item": 23,
+      "nome": "resposta",
+      "tipo_form": "INP",
+      "valor": "usuário encontrado",
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 5,
+      "id_dominio_item": 23,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "INP",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 6,
+      "id_dominio_item": 23,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": "SELECT CD_USUARIO FROM ADMACESSO.USUARIO WHERE CD_USUARIO = ",
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 7,
+      "id_dominio_item": 4,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Sigla Unidade",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 8,
+      "id_dominio_item": 4,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 9,
+      "id_dominio_item": 4,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 10,
+      "id_dominio_item": 4,
+      "nome": "resposta",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 11,
+      "id_dominio_item": 4,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "SQL",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 12,
+      "id_dominio_item": 4,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": "select cd, SIGLA_UNID_TSE, SIT_UNID from srh2.unidade_tse where SIGLA_UNID_TSE = ",
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 13,
+      "id_dominio_item": 30,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Porta manager",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 14,
+      "id_dominio_item": 30,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 15,
+      "id_dominio_item": 30,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 16,
+      "id_dominio_item": 30,
+      "nome": "resposta",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 17,
+      "id_dominio_item": 30,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "ENU",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 18,
+      "id_dominio_item": 30,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 20,
+      "id_dominio_item": 31,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Criar usuário no SEI ?",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 21,
+      "id_dominio_item": 31,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 22,
+      "id_dominio_item": 31,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 23,
+      "id_dominio_item": 31,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 24,
+      "id_dominio_item": 31,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "ENU",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 25,
+      "id_dominio_item": 31,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 26,
+      "id_dominio_item": 22,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Ativo ou Inativo",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 27,
+      "id_dominio_item": 22,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 28,
+      "id_dominio_item": 22,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 29,
+      "id_dominio_item": 22,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 30,
+      "id_dominio_item": 22,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "ENU",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 31,
+      "id_dominio_item": 22,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 32,
+      "id_dominio_item": 6,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Usuário",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 33,
+      "id_dominio_item": 6,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 34,
+      "id_dominio_item": 6,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 35,
+      "id_dominio_item": 6,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 36,
+      "id_dominio_item": 6,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "INP",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 37,
+      "id_dominio_item": 6,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 38,
+      "id_dominio_item": 32,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Informe o CPF do usuário",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 39,
+      "id_dominio_item": 32,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 40,
+      "id_dominio_item": 32,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 41,
+      "id_dominio_item": 32,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 42,
+      "id_dominio_item": 32,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "INP",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 43,
+      "id_dominio_item": 32,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": "SELECT cd_usuario from admacesso.usuario where nr_CPF =",
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 44,
+      "id_dominio_item": 28,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Datasource",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 45,
+      "id_dominio_item": 28,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 46,
+      "id_dominio_item": 28,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 47,
+      "id_dominio_item": 28,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 48,
+      "id_dominio_item": 28,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "SQL",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 49,
+      "id_dominio_item": 28,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 50,
+      "id_dominio_item": 2,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Schema BD",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 51,
+      "id_dominio_item": 2,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "NAO",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 52,
+      "id_dominio_item": 2,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 53,
+      "id_dominio_item": 2,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 54,
+      "id_dominio_item": 2,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "SQL",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 55,
+      "id_dominio_item": 2,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 56,
+      "id_dominio_item": 1,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "WILDFLY_HOME",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 57,
+      "id_dominio_item": 1,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 58,
+      "id_dominio_item": 1,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 59,
+      "id_dominio_item": 1,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 60,
+      "id_dominio_item": 1,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "ENU",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 61,
+      "id_dominio_item": 1,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 62,
+      "id_dominio_item": 29,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "IP HOST executor",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 63,
+      "id_dominio_item": 29,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 64,
+      "id_dominio_item": 29,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 65,
+      "id_dominio_item": 29,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 66,
+      "id_dominio_item": 29,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "ENU",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 67,
+      "id_dominio_item": 29,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 68,
+      "id_dominio_item": 25,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "CMD sql",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 69,
+      "id_dominio_item": 25,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "NAO",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 70,
+      "id_dominio_item": 25,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 71,
+      "id_dominio_item": 25,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 72,
+      "id_dominio_item": 25,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "SQL",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 73,
+      "id_dominio_item": 25,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 74,
+      "id_dominio_item": 24,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "URL Banco",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 75,
+      "id_dominio_item": 24,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 76,
+      "id_dominio_item": 24,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 77,
+      "id_dominio_item": 24,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 78,
+      "id_dominio_item": 24,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "SQL",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 79,
+      "id_dominio_item": 24,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 80,
+      "id_dominio_item": 3,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Recurso",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 81,
+      "id_dominio_item": 3,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "NAO",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 82,
+      "id_dominio_item": 3,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 83,
+      "id_dominio_item": 3,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 84,
+      "id_dominio_item": 3,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "SQL",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 85,
+      "id_dominio_item": 3,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 86,
+      "id_dominio_item": 21,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Requisitados",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 87,
+      "id_dominio_item": 21,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 88,
+      "id_dominio_item": 21,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 89,
+      "id_dominio_item": 21,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 90,
+      "id_dominio_item": 21,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "SQL",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 91,
+      "id_dominio_item": 21,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 92,
+      "id_dominio_item": 20,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Servidores",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 93,
+      "id_dominio_item": 20,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "NAO",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 94,
+      "id_dominio_item": 20,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 95,
+      "id_dominio_item": 20,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 96,
+      "id_dominio_item": 20,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "SQL",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 97,
+      "id_dominio_item": 20,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 98,
+      "id_dominio_item": 5,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Usuário do Oracle",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 99,
+      "id_dominio_item": 5,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 100,
+      "id_dominio_item": 5,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 101,
+      "id_dominio_item": 5,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 102,
+      "id_dominio_item": 5,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "SQL",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 103,
+      "id_dominio_item": 5,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 104,
+      "id_dominio_item": 26,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Host Controller",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 105,
+      "id_dominio_item": 26,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 106,
+      "id_dominio_item": 26,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 107,
+      "id_dominio_item": 26,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 108,
+      "id_dominio_item": 26,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "ENU",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 109,
+      "id_dominio_item": 26,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 110,
+      "id_dominio_item": 27,
+      "nome": "LEGENDA",
+      "tipo_form": "INP",
+      "valor": "Instancia do Cluster",
+      "id_dominio_dicionario": 2,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 111,
+      "id_dominio_item": 27,
+      "nome": "OBRIGATORIO",
+      "tipo_form": "ENU",
+      "valor": "SIM",
+      "id_dominio_dicionario": 3,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 112,
+      "id_dominio_item": 27,
+      "nome": "PLACEHOLEDR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 5,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 113,
+      "id_dominio_item": 27,
+      "nome": "RESPOSTA",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 8,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 114,
+      "id_dominio_item": 27,
+      "nome": "TIPO",
+      "tipo_form": "ENU",
+      "valor": "ENU",
+      "id_dominio_dicionario": 1,
+      "criado_em": "01/01/2020"
+    },
+    {
+      "id": 115,
+      "id_dominio_item": 27,
+      "nome": "VALIDADOR",
+      "tipo_form": "INP",
+      "valor": null,
+      "id_dominio_dicionario": 7,
+      "criado_em": "01/01/2020"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Projeto de Infra",
+      "budget": "10000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 5000,
+      "services": [
+        {
+          "name": "Contratar um DevOps",
+          "cost": "5000",
+          "description": "DevOps para criar projeto na AWS",
+          "id": "79475653-9d65-4eb0-921b-9b12b6c6be52"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "Desenvolvimento do novo site",
+      "budget": "3000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 3
+    }
+  ]
+}

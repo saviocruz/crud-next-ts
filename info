@@ -1,0 +1,28 @@
+https://react.semantic-ui.com/addons/select/
+
+https://stackoverflow.com/questions/52170489/semantic-ui-react-form-select-set-selected-value
+https://stackoverflow.com/questions/55172026/how-to-fill-a-column-considered-a-foreign-key-in-reacttable-in-react-from-json-f
+
+SELECT json_object('id'   VALUE id ,
+                   'nome' VALUE nome,
+                   'ativo' value ativo 
+                       FORMAT JSON)
+                     
+                     
+                     FROM ACESSOWEB.ADM_DOMINIO
+                     
+                     
+SELECT json_object('id'   VALUE id ,
+                   'nome' VALUE nome,
+                   'sigla' VALUE sigla,
+                   'ativo' value ativo,
+                   'id_categoria' VALUE  c.id_superior,
+                  -- 'id_dominio' VALUE  id_dominio,
+                   'restrito' value restrito,
+                   'criado_em' value '"'|| '01/01/2020' ||'"'  
+                   
+                   
+                       FORMAT JSON) || ',' 
+                     
+                     
+                     FROM ACESSOWEB.ADM_CATEGORIA  c  order by id
