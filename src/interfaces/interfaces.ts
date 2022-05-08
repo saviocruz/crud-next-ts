@@ -30,7 +30,6 @@ export interface Dominio {
 export const  estadoInicialDominio  = {
   id: 0, 
   nome: '',
-  sigla: '',
   ativo: 'SIM',
   criado_em: '01/01/2022'
 };

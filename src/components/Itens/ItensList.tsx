@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { Card, CardContent, CardGroup, CardHeader, CardMeta, Icon, } from "semantic-ui-react";
+import { Button, Card, CardContent, CardGroup, CardHeader, CardMeta, Icon, } from "semantic-ui-react";
 
 import { Item } from "src/interfaces/interfaces";
 
@@ -13,7 +13,7 @@ export const ItensList = ({ itens = [] }: Props) => {
   return (
 
     <div>
-      <CardGroup >
+      <CardGroup itemsPerRow={4}>
         {itens.map((item) => (
           <Card
             key={item.id}
@@ -25,9 +25,13 @@ export const ItensList = ({ itens = [] }: Props) => {
                   {new Date(item.criado_em).toLocaleDateString()}
                 </CardMeta>
               )}
-              <button onClick={() => router.push(`/itens/edit/${item.id}`)} >
-                <Icon name="pencil" />
-              </button>
+              <Button inverted color="red" style={{padding: "8px" }} onClick={() => router.push(`/itens/edit/${item.id}`)} >
+                <Icon name="pencil" style={{ margin: "auto"}}/>
+              </Button>
+              <Button primary style={{padding: "8px" }} onClick={() => router.push(`/itens/edit/${item.id}`)} >
+                <Icon name="trash" style={{ margin: "auto"}}/>
+              </Button>
+              
           
             </CardContent>
           </Card>

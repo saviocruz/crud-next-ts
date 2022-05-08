@@ -22,28 +22,20 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
       } catch (error: any) {
         return res.status(400).json({ message: error.message });
       }
-      break;
     case "POST":
       try {
-        
-          await fetch(baseDados, {
-            method: 'POST',
-            body:JSON.stringify(body),
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          })
-            .then((resp) => {
-              return resp.json()
-            })
-            .then((data) => {
-              return res.json(data);
-            })  
-        
+        const { title, description } = body;
+
+        const query =
+          "INSERT INTO tasks(title, description) VALUES ($1, $2) RETURNING *";
+        const values = [title, description];
+
+       // const response = await conn.query(query, values);
+
+        return null;//res.json(response.rows[0]);
       } catch (error: any) {
         return res.status(400).json({ message: error.message });
       }
-      break;
     default:
       return res.status(400).json({ message: "Method are not supported" });
   }

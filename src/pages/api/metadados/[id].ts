@@ -51,19 +51,11 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       break;
     case "DELETE":
       try {
-        await fetch(baseDados+ id, {
-          method: 'DELETE',
-          body:JSON.stringify(body),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        })
-          .then((resp) => {
-            return resp.json()
-          })
-          .then((data) => {
-            return res.json(data);
-          })  
+        const text = "DELETE FROM tasks WHERE id = $1 RETURNING *";
+        const values = [id];
+
+        return res.status(404).json({ message: "Task Not Found" });
+
       } catch (error: any) {
         return res.status(400).json({ message: error.message });
       }

@@ -10,7 +10,7 @@ interface Props {
   dominios: Dominio[]
 }
 
-const Dominio = ({ dominios }: Props) => {
+const DominioForm = ({ dominios }: Props) => {
   return (
     <Layout titulo="Domínios cadastrados">
       {dominios.length === 0 ? (
@@ -24,9 +24,11 @@ const Dominio = ({ dominios }: Props) => {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const dominios = await dominioService.getAll()
+  console.log(dominios)
+  
   return {
-    props: { dominios },
+    props: { dominios : dominios },
   };
 };
  
-export default Dominio;
+export default DominioForm;

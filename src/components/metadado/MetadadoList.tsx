@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { Button, Card, CardContent, CardHeader, CardMeta, Confirm, Container, Grid, GridColumn, GridRow, Icon, } from "semantic-ui-react";
-import { Metadado } from "src/interfaces/interfaces";
+import { estadoInicialMetadado, Metadado } from "src/interfaces/interfaces";
 
 
 interface Props {
@@ -11,6 +11,7 @@ interface Props {
 export const MetadadoList = ({ metadados = [] }: Props) => {
   const router = useRouter();
   const [openConfirm, setOpenConfirm] = useState(false);
+  const [metadado, setMetadado] = useState<Metadado>(estadoInicialMetadado)
 
   const handleDelete = async (id: string) => {
     if (id !== "") {
@@ -25,11 +26,8 @@ export const MetadadoList = ({ metadados = [] }: Props) => {
     }
   };
 
-
   return (
-
     <div>
-
       <Container style={{ padding: "1rem", color: "black", backgroundColor: "white", borderRadius: "10px", width: "70%", }}>
         <h2>  Metadados do Dominio</h2>
 
@@ -77,14 +75,19 @@ export const MetadadoList = ({ metadados = [] }: Props) => {
                 {metadado.ativo}
               </GridColumn>
               <GridColumn width={3} >
-                <button color="red" onClick={() => setOpenConfirm(true)} style={{marginRight: "4px"}}>
+                <button color="red" 
+                          style={{marginRight: "4px"}}
+                          onClick={() => {
+                          setMetadado(metadado)
+                          setOpenConfirm(true) }} >
                   <i aria-hidden="true" className="trash icon" />
                 </button>
-                <button onClick={() => router.push('/metadados/edit/' +  metadado.id  )} >
+                <button onClick={() => { 
+                                      
+                                      router.push('/metadados/edit/' +  metadado.id  ) }
+                                      } >
                   <Icon name="pencil"  /> 
                 </button>
-
-
               </GridColumn>
             </GridRow>
 
@@ -94,7 +97,7 @@ export const MetadadoList = ({ metadados = [] }: Props) => {
 
         <Confirm
           header="Remover item?"
-          content={`Você tem certeza que deseja remover   ${router.query.id}`}
+          content={`Você tem certeza que deseja remover   ${metadado.nome}`}
           open={openConfirm}
           onCancel={() => setOpenConfirm(false)}
           onConfirm={() => typeof router.query.id === "string" && handleDelete(router.query.id)} />

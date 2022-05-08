@@ -1,5 +1,5 @@
 import { Layout } from "src/components/Layout";
-import { Card, Form, Grid, Button, Icon, Confirm, GridColumn, CardContent, FormField, Select, Dropdown, Container, GridRow } from "semantic-ui-react";
+import {  Form, Grid, Button, Icon, Confirm, GridColumn, FormField, Select,  Container, GridRow } from "semantic-ui-react";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Categoria, estadoInicialCategoria } from "src/interfaces/interfaces";
@@ -34,7 +34,7 @@ const NewPage = (): JSX.Element => {
     });
 
   const updateCategoria = async (id: string, categoria: Categoria) => {
-    await fetch("http://localhost:5000/api/categorias/" + id, {
+    await fetch("http://localhost:5000/categorias/" + id, {
       method: "PATCH",
       body: JSON.stringify(categoria),
       headers: {

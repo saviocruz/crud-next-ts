@@ -17,7 +17,8 @@
       "ativo": "SIM",
       "categoriaId": 0,
       "restrito": "NAO",
-      "criado_em": "01/01/2020"
+      "criado_em": "01/01/2020",
+      "categoria": {}
     },
     {
       "id": 3,
@@ -50,12 +51,13 @@
     },
     {
       "id": 6,
-      "nome": "oracle",
+      "nome": "oracle.",
       "sigla": null,
       "ativo": "NAO",
       "categoriaId": 1,
       "restrito": "NAO",
-      "criado_em": "01/01/2020"
+      "criado_em": "01/01/2020",
+      "categoria": {}
     },
     {
       "id": 7,
@@ -931,7 +933,7 @@
     },
     {
       "id": 2,
-      "nome": "SOFTWARE.",
+      "nome": "SOFTWARE",
       "ativo": "SIM",
       "criado_em": "01/01/2020"
     },
@@ -964,6 +966,18 @@
       "nome": "URL_JDBC",
       "ativo": "SIM",
       "criado_em": "01/01/2020"
+    },
+    {
+      "id": 8,
+      "nome": "AGUA",
+      "ativo": "SIM",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 9,
+      "nome": "MENEIRAS",
+      "ativo": "SIM",
+      "criado_em": "01/01/2022"
     }
   ],
   "itens": [
@@ -1252,8 +1266,8 @@
       "descricao": "Tipo de campo",
       "ativo": "SIM",
       "tipo": "ENU",
-      "informacao": "ENU;SQL;WRWERWREWERWWE",
-      "legenda": "Tipo de campo",
+      "informacao": "ENU;SQL;INU",
+      "legenda": "Tipo Form",
       "obrigatorio": "SIM",
       "ordem": 5,
       "tamanho": "8",
@@ -1267,9 +1281,9 @@
       "ativo": "NAO",
       "tipo": "INP",
       "informacao": "Legenda do nome",
-      "legenda": "Legenda.",
+      "legenda": "Legenda",
       "obrigatorio": "SIM",
-      "ordem": "2",
+      "ordem": "1",
       "tamanho": 20,
       "criado_em": "01/01/2020"
     },
@@ -1283,19 +1297,19 @@
       "informacao": ":Selecione;SIM,SIM;NAO,NAO",
       "legenda": "Obrigatório",
       "obrigatorio": "SIM",
-      "ordem": 3,
+      "ordem": "4",
       "tamanho": 10,
       "criado_em": "01/01/2020"
     },
     {
       "id": 4,
-      "id_dominio": null,
-      "nome": "Placeholder",
+      "id_dominio": 4,
+      "nome": "ANS",
       "descricao": null,
       "ativo": "SIM",
-      "tipo": null,
-      "informacao": "ERWEREW",
-      "legenda": null,
+      "tipo": "INP",
+      "informacao": "ANS",
+      "legenda": "ANS",
       "obrigatorio": "NAO",
       "ordem": 4,
       "tamanho": 3,
@@ -1317,8 +1331,8 @@
     },
     {
       "id": 6,
-      "id_dominio": null,
-      "nome": "placehoslder",
+      "id_dominio": 4,
+      "nome": "INDICADORES",
       "descricao": null,
       "ativo": "NAO",
       "tipo": "ENU",

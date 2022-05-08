@@ -1,24 +1,34 @@
 import { Layout } from "src/components/Layout";
-import { Card, Form, Grid, Button, Icon, Confirm, GridColumn, CardContent, FormField, Select, Dropdown, CardHeader, CardMeta, Container, GridRow } from "semantic-ui-react";
+import {   Form, Grid, Button, Icon, Confirm, GridColumn,  FormField,  Container, GridRow } from "semantic-ui-react";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Dominio, estadoInicialDominio, Item, Metadado } from "src/interfaces/interfaces";
 import { MetadadoList } from "src/components/metadado/MetadadoList";
-import { dominioService } from '../../services';
+import { dominioService, metadadoService } from '../../services';
+import { GetServerSideProps } from "next";
 
 type ChangeInputHandler = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 
-const NewPage = (): JSX.Element => {
+interface Props {
+  dominios: Dominio
+}
+
+const NewPage = ({ dominios }: Props): JSX.Element => {
   const [dominio, setDominio] = useState<Dominio>(estadoInicialDominio);
-  const [dominios, setDominios] = useState<Dominio[]>([]);
-   const [metadados, setMetadados] = useState<Metadado[]>([]);
+  const [metadados, setMetadados] = useState<Metadado[]>([]);
   const [loading, setLoading] = useState(false);
-  const [openConfirm, setOpenConfirm] = useState(false);
+  const [novo, setNovo] = useState(false);
+  const [openConfirm, setOpenConfirm] = useState<boolean>(false);
   const router = useRouter();
 
   useEffect(() => {
-    if (typeof router.query.id === "string")
+    if (typeof router.query.id === "string") {
       carregarLista(router.query.id);
+    }
+    else {
+      setNovo(true)
+    }
+
   }, [router.query]);
 
 
@@ -51,24 +61,28 @@ const NewPage = (): JSX.Element => {
     setDominio({ ...dominio, [name]: value });
 
   const carregarLista = async (id: string) => {
-    const [dominio, metadados ] = await dominioService.carregaDados(id);
-     
+    setLoading(true);
+    const dominio = await dominioService.carregaDados(id);
+    const metadados = await metadadoService.carregaDados(id);
+    console.log(metadados)
     setDominio(dominio)
     setMetadados(metadados)
-    
+
+    setLoading(false);
+
   };
 
   const handleDelete = async (id: string) => {
     try {
       dominioService.delete(id)
-      router.push("/");
+      router.push("/dominio");
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <Layout titulo="Detalhe do cadastro">
+    <Layout titulo="Detalhe do cadastro" >
       <Container
         style={{
           padding: "1rem",
@@ -76,7 +90,11 @@ const NewPage = (): JSX.Element => {
           borderRadius: "10px",
           width: "70%"
         }}>
-        <Form onSubmit={handleSubmit}>
+        <Button onClick={() => router.back()} >
+          <Icon name="arrow left" />
+          Voltar
+        </Button>
+        <Form onSubmit={handleSubmit} loading={loading}>
           <Grid
             centered
             columns={2}
@@ -121,25 +139,24 @@ const NewPage = (): JSX.Element => {
                     Atualiza
                   </Button>
                 ) : (
-                  <Button primary loading={loading}>
+                  <Button primary loading={loading}  >
                     <Icon name="save" />
                     Salva
                   </Button>
                 )}
-                <Button onClick={() => router.push('/dominio')}>
-                  <Icon name="undo" />
-                  Voltar
-                </Button>
-                {router.query.id && (
-                  <Button inverted color="red" onClick={() => setOpenConfirm(true)}>
-                    <Icon name="trash" />
-                    Excluir
-                  </Button>
-                )}
+
+
               </GridColumn>
             </GridRow>
           </Grid>
         </Form>
+
+        {router.query.id && (
+          <Button nos inverted color="red" onClick={() => { setOpenConfirm(true) }} >
+            <Icon name="trash" />
+            Excluir
+          </Button>
+        )}
 
         <Confirm
           header="Remover dominio?"
@@ -151,12 +168,19 @@ const NewPage = (): JSX.Element => {
       </Container>
 
       <br />
-
-      <MetadadoList metadados={metadados} />
-
+      {!novo ? (
+        <MetadadoList metadados={metadados} />
+      ) : (<></>)}
 
     </Layout>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const dominios = await dominioService.getAll()
+  return {
+    props: { dominios },
+  };
 };
 
 export default NewPage;

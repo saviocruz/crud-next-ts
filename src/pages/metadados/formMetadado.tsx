@@ -12,7 +12,6 @@ const NewPage = (): JSX.Element => {
   const [loading, setLoading] = useState(false);
   const [openConfirm, setOpenConfirm] = useState(false);
   const router = useRouter();
-  const { push, back } = useRouter();
   useEffect(() => {
     listarItens();
   }, [])
@@ -20,7 +19,7 @@ const NewPage = (): JSX.Element => {
   useEffect(() => {
     if (typeof router.query.id === "string")
       carregarLista(router.query.id);
-  }, [router.query ]);
+  }, [router.query]);
 
 
   const criaNovo = async (metadado: Metadado) =>
@@ -53,7 +52,7 @@ const NewPage = (): JSX.Element => {
         criaNovo(metadado);
       }
       setMetadado(estadoInicialMetadado);
-      router.back( );
+      router.back();
     } catch (error) {
       console.log(error);
     }
@@ -64,7 +63,7 @@ const NewPage = (): JSX.Element => {
     setMetadado({ ...metadado, [name]: value });
 
   const listarItens = async () => {
-    console.log(metadado)
+   // console.log(metadado)
     fetch('http://localhost:5000/metadados', {
       method: 'GET',
       headers: {
@@ -78,7 +77,7 @@ const NewPage = (): JSX.Element => {
   }
 
   const carregarLista = async (id: string) => {
-
+    setLoading(true)
     if (id !== null) {
       const response = await fetch("http://localhost:5000/metadados/" + id);
       const metadado: Metadado = await response.json();
@@ -101,6 +100,7 @@ const NewPage = (): JSX.Element => {
           });
       }
     }
+    setLoading(false)
   };
 
   const handleDelete = async (id: string) => {
@@ -113,7 +113,6 @@ const NewPage = (): JSX.Element => {
       } catch (error) {
         console.log(error);
       }
-
     }
   };
 
@@ -126,7 +125,11 @@ const NewPage = (): JSX.Element => {
           borderRadius: "10px",
           width: "70%"
         }}>
-        <Form onSubmit={handleSubmit}>
+        <Button onClick={() => router.back()}>
+          <Icon name="undo" />
+          Voltar
+        </Button>
+        <Form onSubmit={handleSubmit} loading={loading}>
           <Grid
             centered
             columns={2}
@@ -155,7 +158,7 @@ const NewPage = (): JSX.Element => {
                   <input
                     type="text"
 
-                    
+
                     required={true}
                     placeholder="Digite uma legenda"
                     name="legenda"
@@ -243,14 +246,14 @@ const NewPage = (): JSX.Element => {
                   <label htmlFor="informacao">Informação:</label>
                   <textarea
                     rows={5}
-                 
+
                     name="informacao"
                     id="informacao"
                     placeholder="digite a imformação a se processada"
                     onChange={handleChange}
                     value={metadado.informacao}
                   ></textarea>
- 
+
 
                 </FormField>
               </GridColumn>
@@ -268,10 +271,7 @@ const NewPage = (): JSX.Element => {
                     Salva
                   </Button>
                 )}
-                <Button onClick={() => back( )}>
-                  <Icon name="undo" />
-                  Voltar
-                </Button>
+
                 {router.query.id && (
                   <Button inverted color="red" onClick={() => setOpenConfirm(true)}>
                     <Icon name="trash" />
@@ -285,7 +285,7 @@ const NewPage = (): JSX.Element => {
 
         <Confirm
           header="Remover Item?"
-          content={`Você tem certeza que deseja remover esta item ${router.query.id}`}
+          content={`Você tem certeza que deseja remover estE item ${metadado.legenda}`}
           open={openConfirm}
           onCancel={() => setOpenConfirm(false)}
           onConfirm={() => typeof router.query.id === "string" && handleDelete(router.query.id)} />

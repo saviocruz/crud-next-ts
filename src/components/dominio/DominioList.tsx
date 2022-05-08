@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
-import { Card, CardContent, CardGroup, CardHeader, CardMeta, Icon, } from "semantic-ui-react";
+import { useState } from "react";
+import { Button, Card, CardContent, CardGroup, CardHeader, CardMeta, Icon, } from "semantic-ui-react";
 
 import { Dominio } from "src/interfaces/interfaces";
-import { ItensList } from "../Itens/ItensList";
 
 interface Props {
   dominios: Dominio[];
@@ -10,32 +10,26 @@ interface Props {
 
 export const DominioList = ({ dominios = [] }: Props) => {
   const router = useRouter();
-
-
-   
-
-
+  const [loading, setLoading] = useState<boolean>(false);
   return (
-
     <div>
+      <Button primary style={{ padding: "8px" }} onClick={() => router.push(`/dominios/formDominio `)} loading={loading}>
+        <Icon name="bullseye" style={{ margin: "auto" }} /> Novo
+      </Button>
+      <br/> <br/> 
       <CardGroup >
         {dominios.map((dominio) => (
           <Card
-            key={dominio.id}
-          >
+            key={dominio.id}>
             <CardContent>
               <CardHeader> {dominio.nome}</ CardHeader>
-              {dominio.criado_em && (
-                <CardMeta>
-                  {new Date(dominio.criado_em).toLocaleDateString()}
-                </CardMeta>
-              )}
-              <button onClick={() => router.push(`/dominios/itens/${dominio.id}`)} >
-                <Icon name="pencil" />
-              </button>
-              <button onClick={() => router.push(`/dominios/edit/${dominio.id}`)}>
-                <Icon name="pencil" />
-              </button>
+              <br />
+              <Button primary style={{ padding: "8px" }} onClick={() => router.push(`/dominios/itens/${dominio.id}`)} loading={loading}>
+                <Icon name="content" style={{ margin: "auto" }} />
+              </Button>
+              <Button primary style={{ padding: "8px" }} onClick={() => router.push(`/dominios/edit/${dominio.id}`)}>
+                <Icon name="configure" style={{ margin: "auto" }} />
+              </Button>
             </CardContent>
           </Card>
 
@@ -44,7 +38,7 @@ export const DominioList = ({ dominios = [] }: Props) => {
       <CardGroup itemsPerRow={1}>
         <Card>
           <CardContent style={{ minHeight: "300px" }}>
-             
+
           </CardContent>
 
         </Card>
