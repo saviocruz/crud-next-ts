@@ -1,3 +1,5 @@
+import { SemanticWIDTHS } from "semantic-ui-react";
+
 export interface Categoria {
   id: number;
   nome: string;
@@ -37,16 +39,17 @@ export const  estadoInicialDominio  = {
 
 export interface Metadado {
   id: number;
-  nome?: string;
-  legenda?: string;
+  nome: string;
+  legenda: string;
   tipo?: string;
   ordem?: number;
   obrigatorio?: string;
-  tamanho?: number;
+  tamanho?: SemanticWIDTHS | number ;
   informacao?: string;
   ativo?: string;
   criado_em?: string;
 }
+
 
 export const  estadoInicialMetadado  = {
   id: 0, 
@@ -55,7 +58,7 @@ export const  estadoInicialMetadado  = {
   tipo: '',
   ordem: 0,
   obrigatorio: '',
-  tamanho: 10,
+  tamanho:  1,
   informacao: '',
   ativo: 'SIM',
   criado_em: '01/01/2022'
@@ -66,8 +69,9 @@ export interface Item {
   id: number;
   id_dominio: number;
   nome?: string;
-  tipo?: string;
-  valor?: number;
+  descricao?: string;
+  informacao?: string;
+  ativo:string;
   criado_em?: string;
 }
 
@@ -75,7 +79,28 @@ export const  estadoInicialItem  = {
   id: 0, 
   id_dominio: 0, 
   nome: '',
-  tipo: '',
-  valor: 0,
+  descricao: '',
+  informacao: '',
+  ativo: '',
+  criado_em: '01/01/2022'
+};
+
+export interface ItemValor {
+  id: number;
+  id_dominio_item: number;
+  nome: string;
+  tipo_form?: string;
+  valor?: string;
+  id_dominio_dicionario:number;
+  criado_em?: string;
+}
+
+export const  estadoInicialItemValor  = {
+  id: 0, 
+  id_dominio_item: 0, 
+  nome: '',
+  tipo_form: '',
+  valor: '',
+  id_dominio_dicionario: 0, 
   criado_em: '01/01/2022'
 };

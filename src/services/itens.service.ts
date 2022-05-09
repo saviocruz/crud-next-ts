@@ -11,6 +11,7 @@ export const itemService = {
   carregaDados,
   novo,
   atualiza,
+  carregaItemValor,
   delete: _delete
 };
 
@@ -26,12 +27,20 @@ async function getAll() {
 async function carregaDados(id: string) {
 
   if (id !== null) {
-    const response = await fetch(baseDados + "?id_dominio=" + id);
+    const response = await fetch(baseApi  + id);
     const item  = await response.json();
     return item
   }
 }
+async function carregaItemValor(id_dominio_item: string) {
 
+  if (id_dominio_item !== null) {
+    console.log("http://localhost:5000/itens_valores"  + "?id_dominio_item=" + id_dominio_item)
+    const response = await fetch("http://localhost:5000/itens_valores"  + "?id_dominio_item=" + id_dominio_item + "?metadadoId_ne=&_expand=metadado", );
+    const metadado   = await response.json();
+    return metadado
+  }
+}
   
 
 async function novo(item  : Item) {

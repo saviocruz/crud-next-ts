@@ -1,34 +1,41 @@
 import { Layout } from "src/components/Layout";
-import { Form, Grid, Button, Icon, GridColumn, Container, GridRow } from "semantic-ui-react";
+import { Form, Grid, Button, Icon, GridColumn, FormField, Container, GridRow, Card } from "semantic-ui-react";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { estadoInicialMetadado, Metadado } from "src/interfaces/interfaces";
+import { estadoInicialItem, Item, ItemValor, Metadado } from "src/interfaces/interfaces";
 import { metadadoService } from "src/services";
 import GridInput from "src/components/form/GridInput";
 import GridTextarea from "src/components/form/GridTextarea";
+import { itemService } from "src/services/itens.service";
 
 type ChangeInputHandler = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 
 const NewPage = (): JSX.Element => {
-  const [metadado, setMetadado] = useState<Metadado>(estadoInicialMetadado);
+  const [item, setItem] = useState<Item>(estadoInicialItem);
+  const [metadados, setMetadados] = useState<Metadado[]>([]);
+  const [itemValor, setItemValor] = useState<ItemValor[]>([]);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
+    console.log(router.query.id)
     if (typeof router.query.id === "string")
       carregar(router.query.id);
   }, [router.query]);
 
+
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     setLoading(true);
     try {
       if (typeof router.query.id === "string") {
-        metadadoService.atualiza(metadado)
+        itemService.atualiza(item)
       } else {
-        metadadoService.novo(metadado)
+        itemService.novo(item)
       }
-      setMetadado(estadoInicialMetadado);
+      setItem(estadoInicialItem);
       router.back();
     } catch (error) {
       console.log(error);
@@ -37,29 +44,26 @@ const NewPage = (): JSX.Element => {
   };
 
   const handleChange = ({ target: { name, value } }: ChangeInputHandler) =>
-    setMetadado({ ...metadado, [name]: value });
+    setItem({ ...item, [name]: value });
+
 
   const carregar = async (id: string) => {
     setLoading(true)
     if (id !== null) {
-      const metadado = await metadadoService.carregaDados(id)
-      setMetadado(metadado)
-    }
-    setLoading(false)
-  };
+      const item = await itemService.carregaDados(id)
+      const metadados = await metadadoService.carregaItemDominio(item.id_dominio)
+      const itemValor = await itemService.carregaItemValor(item.id)
+     console.log(itemValor)
+     setItemValor(itemValor)
 
-  const handleDelete = async (id: string) => {
-    setLoading(true)
-    try {
-      metadadoService.delete(id)
-    } catch (error) {
-      console.log(error);
+      setMetadados(metadados)
+      setItem(item)
     }
     setLoading(false)
   };
 
   return (
-    <Layout titulo="Detalhe do cadastro">
+    <Layout titulo="Detalhe do item">
       <Container
         style={{
           padding: "1rem",
@@ -80,70 +84,45 @@ const NewPage = (): JSX.Element => {
               <GridInput titulo="Nome:"
                 name="nome"
                 required={true}
-                width={10}
+                width={6}
                 placeholder="Digite o nome"
                 handleChange={handleChange}
-                value={metadado.nome}
+                value={item.nome}
                 autoFocus />
-              <GridInput titulo="Legenda:"
-                name="legenda"
+              <GridInput titulo="Descrição:"
+                name="descricao"
                 required={true}
-                width={5}
+                width={10}
                 handleChange={handleChange}
-                value={metadado.legenda} />
+                value={item.descricao} />
             </GridRow>
 
+            <label>Campos Personalizados</label>
+          
+            <GridRow  > 
+              {itemValor.map((itemValor) =>  ( 
+                  <GridColumn  key={itemValor.id}>
+                    <GridInput titulo={itemValor.nome}
+                      name={itemValor.nome}
+                      required={true}
+                      width={5}
+                      handleChange={handleChange}
+                      value={itemValor.valor}  />
+                  </GridColumn>
+             
+              ))}
+              </GridRow>
+
+
+ 
             <GridRow>
-              <GridInput titulo="Tipo:"
-                name="tipo"
-                required={true}
-                width={3}
-                maxLength={3}
-                handleChange={handleChange}
-                value={metadado.tipo} />
-
-              <GridInput titulo="Ordem:"
-                name="ordem"
-                required={true}
-                width={2}
-                maxLength={3}
-                handleChange={handleChange}
-                value={metadado.ordem} />
-
-              <GridInput titulo="Obrigatorio:"
-                name="obrigatorio"
-                required={true}
-                width={2}
-                maxLength={3}
-                handleChange={handleChange}
-                value={metadado.obrigatorio} />
-
-              <GridInput titulo="Tamanho:"
-                name="tamanho"
-                required={true}
-                width={2}
-                maxLength={3}
-                handleChange={handleChange}
-                value={metadado.tamanho} />
-
-              <GridInput titulo="Ativo:"
-                name="ativo"
-                required={true}
-                width={2}
-                maxLength={3}
-                handleChange={handleChange}
-                value={metadado.ativo} />
-            </GridRow>
-            <GridRow>
-
               <GridTextarea titulo="Informação:"
                 name="ativo"
                 required={true}
                 width={16}
                 rows={5}
                 handleChange={handleChange}
-                value={metadado.informacao} />
-
+                value={item.informacao} />
             </GridRow>
             <GridRow >
               <GridColumn width={10}  >

@@ -19,11 +19,7 @@ const NewPage = (): JSX.Element => {
     const itens: Item[] = await dominioService.carregaItens(id);
     setItens(itens)
   };
-
-  const handleDelete = async (id: string) => {
-    dominioService.delete(id)
-  };
-
+ 
   return (
     <Layout titulo="Lista de ">
        <Button primary  onClick={() => router.back()} >

@@ -12,10 +12,10 @@ interface Props {
     autoFocus?: boolean
 }
 
-function GridInput({ titulo, name, required, width, maxLength, value, handleChange, placeholder, autoFocus }: Props) {
+function GridInputNoCollum({ titulo, name, required, width, maxLength, value, handleChange, placeholder, autoFocus }: Props) {
     return (
         <React.Fragment>
-            <GridColumn width={width}>
+       
                 <FormField>
                     <label htmlFor={name}>{titulo}</label>
                     <input type="text" name={name} id={name} value={value}
@@ -25,9 +25,9 @@ function GridInput({ titulo, name, required, width, maxLength, value, handleChan
                         placeholder={placeholder}
                         autoFocus={autoFocus} />
                 </FormField>
-            </GridColumn>
+       
         </React.Fragment>
     )
 }
 
-export default GridInput
+export default GridInputNoCollum
