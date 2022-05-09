@@ -17,19 +17,25 @@ export const DominioList = ({ dominios = [] }: Props) => {
         <Icon name="bullseye" style={{ margin: "auto" }} /> Novo
       </Button>
       <br/> <br/> 
-      <CardGroup >
+      <CardGroup itemsPerRow={4}>
         {dominios.map((dominio) => (
           <Card
             key={dominio.id}>
-            <CardContent>
+            <CardContent >
               <CardHeader> {dominio.nome}</ CardHeader>
               <br />
+              <div style={{textAlign:"right"}}>
+              <Button primary style={{ padding: "8px" }} onClick={() => router.push(`/dominios/edit/${dominio.id}`)}>
+                <Icon name="pencil" style={{ margin: "auto" }} />
+              </Button>
               <Button primary style={{ padding: "8px" }} onClick={() => router.push(`/dominios/itens/${dominio.id}`)} loading={loading}>
                 <Icon name="content" style={{ margin: "auto" }} />
               </Button>
-              <Button primary style={{ padding: "8px" }} onClick={() => router.push(`/dominios/edit/${dominio.id}`)}>
-                <Icon name="configure" style={{ margin: "auto" }} />
+              
+              <Button inverted color="red" style={{ padding: "8px" }} onClick={() => router.push(`/dominios/edit/${dominio.id}`)}>
+                <Icon name="trash" style={{ margin: "auto" }} />
               </Button>
+              </div>
             </CardContent>
           </Card>
 

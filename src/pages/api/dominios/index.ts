@@ -3,6 +3,11 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 const baseDados = `${apiDados}/dominios/`;
  
+export const config = {
+  api: {
+    externalResolver: true,
+  },
+}
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async function (req: NextApiRequest, res: NextApiResponse) {
@@ -25,7 +30,6 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
       break;
     case "POST":
       try {
-        
           await fetch(baseDados, {
             method: 'POST',
             body:JSON.stringify(body),

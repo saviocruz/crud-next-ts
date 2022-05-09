@@ -14,7 +14,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   switch (method) {
     case "GET":
       try {
-        await fetch(baseDados+ id, {
+        await fetch(baseDados + id, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

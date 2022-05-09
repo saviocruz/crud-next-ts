@@ -26,7 +26,7 @@ const NewPage = (): JSX.Element => {
 
   return (
     <Layout titulo="Lista de ">
-       <Button primary  onClick={() => router.push(`/itens/edit/`)} >
+       <Button primary  onClick={() => router.back()} >
         <Icon  name="backward"  />
       </Button>
       <Button primary  onClick={() => router.push(`/itens/edit/`)} >

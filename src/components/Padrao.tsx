@@ -12,9 +12,7 @@ export const Padrao = ({titulo,  msg, retorno}: Props) => {
     const { push, back } = useRouter();
 
     return (
-         
-        
-        < Grid
+        <Grid
             columns={3}
             centered
             verticalAlign="middle"

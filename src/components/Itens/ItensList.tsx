@@ -25,13 +25,14 @@ export const ItensList = ({ itens = [] }: Props) => {
                   {new Date(item.criado_em).toLocaleDateString()}
                 </CardMeta>
               )}
-              <Button inverted color="red" style={{padding: "8px" }} onClick={() => router.push(`/itens/edit/${item.id}`)} >
+              <div style={{textAlign: "right"}}>
+              <Button primary style={{padding: "8px" }} onClick={() => router.push(`/itens/edit/${item.id}`)} >
                 <Icon name="pencil" style={{ margin: "auto"}}/>
               </Button>
-              <Button primary style={{padding: "8px" }} onClick={() => router.push(`/itens/edit/${item.id}`)} >
+              <Button inverted color="red"  style={{padding: "8px" }} onClick={() => router.push(`/itens/edit/${item.id}`)} >
                 <Icon name="trash" style={{ margin: "auto"}}/>
               </Button>
-              
+              </div>
           
             </CardContent>
           </Card>

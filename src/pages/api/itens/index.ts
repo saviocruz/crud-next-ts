@@ -1,7 +1,7 @@
 import { apiDados } from "config";
 import { NextApiRequest, NextApiResponse } from "next";
 
-const baseDados = `${apiDados}/dominios/`;
+const baseDados = `${apiDados}/itens/`;
  
 
 // eslint-disable-next-line import/no-anonymous-default-export

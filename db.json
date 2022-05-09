@@ -933,7 +933,7 @@
     },
     {
       "id": 2,
-      "nome": "SOFTWARE",
+      "nome": "SOFTWARE.",
       "ativo": "SIM",
       "criado_em": "01/01/2020"
     },
@@ -957,7 +957,7 @@
     },
     {
       "id": 6,
-      "nome": "SQL",
+      "nome": " dss",
       "ativo": "SIM",
       "criado_em": "01/01/2020"
     },
@@ -976,6 +976,12 @@
     {
       "id": 9,
       "nome": "MENEIRAS",
+      "ativo": "SIM",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 10,
+      "nome": "TESTE",
       "ativo": "SIM",
       "criado_em": "01/01/2022"
     }
@@ -1267,7 +1273,7 @@
       "ativo": "SIM",
       "tipo": "ENU",
       "informacao": "ENU;SQL;INU",
-      "legenda": "Tipo Form",
+      "legenda": "Tipo",
       "obrigatorio": "SIM",
       "ordem": 5,
       "tamanho": "8",
@@ -1304,14 +1310,14 @@
     {
       "id": 4,
       "id_dominio": 4,
-      "nome": "ANS",
+      "nome": "ANS.",
       "descricao": null,
       "ativo": "SIM",
       "tipo": "INP",
       "informacao": "ANS",
       "legenda": "ANS",
       "obrigatorio": "NAO",
-      "ordem": 4,
+      "ordem": "1",
       "tamanho": 3,
       "criado_em": "01/01/2020"
     },
@@ -1332,14 +1338,14 @@
     {
       "id": 6,
       "id_dominio": 4,
-      "nome": "INDICADORES",
+      "nome": "INDICADORES.",
       "descricao": null,
       "ativo": "NAO",
       "tipo": "ENU",
       "informacao": "NADA",
       "legenda": "place",
       "obrigatorio": "NAO",
-      "ordem": 4,
+      "ordem": "1",
       "tamanho": 8,
       "criado_em": "01/01/2020"
     },

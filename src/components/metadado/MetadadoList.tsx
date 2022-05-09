@@ -37,9 +37,12 @@ export const MetadadoList = ({ metadados = [] }: Props) => {
           style={{ margin: "5px", border: "0px solid #c0c0c0", borderRadius: "10px", }}
         >
           <GridRow columns={5} style={{ backgroundColor: "#c0c0c0", margin: "5px", border: "1px solid #c0c0c0", borderRadius: "5px", }}>
-            <GridColumn width={4} >
+            <GridColumn width={3} >
               <label>Nome campo</label>
             </GridColumn >
+            <GridColumn  width={2} >
+              <label>Legenda</label>
+            </GridColumn>
             <GridColumn  width={2} >
               <label>Tipo</label>
             </GridColumn>
@@ -47,7 +50,7 @@ export const MetadadoList = ({ metadados = [] }: Props) => {
               <label>Ordem</label>
             </GridColumn>
             <GridColumn width={2} >
-              <label>Obrigatorio</label>
+              <label title="Obrigatório">Obrig </label>
             </GridColumn>
             <GridColumn width={2} >
               <label>Ativo</label>
@@ -59,8 +62,11 @@ export const MetadadoList = ({ metadados = [] }: Props) => {
 
           {metadados.map((metadado) => (
             <GridRow style={{ borderBottom: "1px solid #c0c0c0", padding: "4px" }}  key={metadado.id}>
-              <GridColumn width={4} >
+              <GridColumn width={3} >
                 {metadado.nome}
+              </GridColumn>
+              <GridColumn width={2} >
+                {metadado.legenda}
               </GridColumn>
               <GridColumn width={2} >
                 {metadado.tipo}
@@ -75,19 +81,18 @@ export const MetadadoList = ({ metadados = [] }: Props) => {
                 {metadado.ativo}
               </GridColumn>
               <GridColumn width={3} >
-                <button color="red" 
-                          style={{marginRight: "4px"}}
+                <Button  primary style={{ padding: "8px", marginRight: "4px"}} onClick={() => { router.push('/metadados/edit/' +  metadado.id  ) }                                      } >
+                  <Icon name="pencil" style={{ margin: "auto"}} /> 
+                </Button>
+                <Button inverted color="red" 
+                          style={{ padding: "8px" }}
+                       
                           onClick={() => {
                           setMetadado(metadado)
                           setOpenConfirm(true) }} >
-                  <i aria-hidden="true" className="trash icon" />
-                </button>
-                <button onClick={() => { 
-                                      
-                                      router.push('/metadados/edit/' +  metadado.id  ) }
-                                      } >
-                  <Icon name="pencil"  /> 
-                </button>
+                  <i aria-hidden="true" className="trash icon" style={{ margin: "auto"}}/>
+                </Button>
+                
               </GridColumn>
             </GridRow>
 

@@ -1,14 +1,13 @@
 import { apiDados, apiUrl } from 'config';
-import {  Metadado } from 'src/interfaces/interfaces';
+import {  Item } from 'src/interfaces/interfaces';
 import axios from 'axios'
 
-const baseApi = `${apiUrl}/metadados/`;
-const baseDados = `${apiDados}/metadados/`;
+const baseApi = `${apiUrl}/itens/`;
+const baseDados = `${apiDados}/itens/`;
 
 
-export const metadadoService = {
+export const itemService = {
   getAll,
-  carregaItemDominio,
   carregaDados,
   novo,
   atualiza,
@@ -19,49 +18,38 @@ async function getAll() {
 
   const response = await fetch(baseApi);
   const data = await response.json();
-  const metadados = data.map((item: Metadado) => item)
-  return metadados;
+  const itens = data.map((item: Item) => item)
+  return itens;
 }
  
-async function carregaItemDominio(id_dominio: string) {
-
-  if (id_dominio !== null) {
-    const response = await fetch(baseApi + "dominio/" +id_dominio);
-    const metadado   = await response.json();
-    return metadado
-  }
-}
-
 
 async function carregaDados(id: string) {
 
   if (id !== null) {
-    const response = await fetch(baseApi + id);
-    const metadado   = await response.json();
-    return metadado
+    const response = await fetch(baseDados + "?id_dominio=" + id);
+    const item  = await response.json();
+    return item
   }
 }
 
   
 
-async function novo(metadado  : Metadado) {
+async function novo(item  : Item) {
 
   await fetch(baseApi, {
     method: "POST",
-    body: JSON.stringify(metadado
-      ),
+    body: JSON.stringify(item),
     headers: {
       "Content-Type": "application/json",
     },
   });
 }
 
-async function atualiza(metadado  : Metadado
+async function atualiza(item  : Item
   ) {
-  await fetch(baseApi + metadado.id, {
+  await fetch(baseApi + item.id, {
     method: "PATCH",
-    body: JSON.stringify(metadado
-      ),
+    body: JSON.stringify(item),
     headers: {
       "Content-Type": "application/json",
     },

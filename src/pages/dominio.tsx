@@ -24,8 +24,6 @@ const DominioForm = ({ dominios }: Props) => {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const dominios = await dominioService.getAll()
-  console.log(dominios)
-  
   return {
     props: { dominios : dominios },
   };
