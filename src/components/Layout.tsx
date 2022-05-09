@@ -24,11 +24,13 @@ export function Layout({ titulo, children }: HeaderProps) {
       >
         <h1 style={{ textAlign: "center" }}>{titulo}</h1>
         <Container
+        fluid={true}
           style={{
             padding: "2rem",
             minHeight: "80vh",
             border: "2px solid #c0c0c0",
             backgroundColor: "#666",
+            width: "90%",
             
      
           borderStartEndRadius: "20px",
