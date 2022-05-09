@@ -26,6 +26,7 @@ async function getAll() {
 async function carregaItemDominio(id_dominio: string) {
 
   if (id_dominio !== null) {
+    console.log(baseApi + "dominio/" +id_dominio)
     const response = await fetch(baseApi + "dominio/" +id_dominio);
     const metadado   = await response.json();
     return metadado

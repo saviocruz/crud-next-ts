@@ -7,8 +7,8 @@ interface Props {
     width: SemanticWIDTHS;
     maxLength?: number
     value: any;
-    handleChange: any;
     placeholder?: string;
+    handleChange?: any;
     autoFocus?: boolean
 }
 
@@ -17,11 +17,14 @@ function GridInput({ titulo, name, required, width, maxLength, value, handleChan
         <React.Fragment>
             <GridColumn width={width}>
                 <FormField>
-                    <label htmlFor={name}>{titulo}</label>
+                    <label htmlFor={name}>{titulo}
+                    {(required) &&(
+                    <span style={{color:"red"}} > * </span>)}
+                    </label>
                     <input type="text" name={name} id={name} value={value}
                         required={required}
                         maxLength={maxLength}
-                        onChange={handleChange}
+                        onChange= {handleChange}
                         placeholder={placeholder}
                         autoFocus={autoFocus} />
                 </FormField>

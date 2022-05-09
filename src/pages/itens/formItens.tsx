@@ -2,7 +2,7 @@ import { Layout } from "src/components/Layout";
 import { Form, Grid, Button, Icon, GridColumn, FormField, Container, GridRow, Card } from "semantic-ui-react";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { estadoInicialItem, Item, ItemValor, Metadado } from "src/interfaces/interfaces";
+import { estadoInicialItem, estadoInicialItemValor, Item, ItemValor, Metadado } from "src/interfaces/interfaces";
 import { metadadoService } from "src/services";
 import GridInput from "src/components/form/GridInput";
 import GridTextarea from "src/components/form/GridTextarea";
@@ -14,6 +14,8 @@ const NewPage = (): JSX.Element => {
   const [item, setItem] = useState<Item>(estadoInicialItem);
   const [metadados, setMetadados] = useState<Metadado[]>([]);
   const [itemValor, setItemValor] = useState<ItemValor[]>([]);
+  const [itemValo, setItemValo] = useState<ItemValor>(estadoInicialItemValor);
+
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -43,9 +45,13 @@ const NewPage = (): JSX.Element => {
     setLoading(false);
   };
 
-  const handleChange = ({ target: { name, value } }: ChangeInputHandler) =>
-    setItem({ ...item, [name]: value });
-
+  const handleChange = ({ target: { name, value, id } }: ChangeInputHandler) =>
+  {
+    
+    console.log(name, value, id)
+    
+    setItemValo({ ...itemValo, [name]: value });
+  }
 
   const carregar = async (id: string) => {
     setLoading(true)
@@ -53,6 +59,7 @@ const NewPage = (): JSX.Element => {
       const item = await itemService.carregaDados(id)
       const metadados = await metadadoService.carregaItemDominio(item.id_dominio)
       const itemValor = await itemService.carregaItemValor(item.id)
+
      console.log(itemValor)
      setItemValor(itemValor)
 
@@ -100,14 +107,17 @@ const NewPage = (): JSX.Element => {
             <label>Campos Personalizados</label>
           
             <GridRow  > 
-              {itemValor.map((itemValor) =>  ( 
-                  <GridColumn  key={itemValor.id}>
-                    <GridInput titulo={itemValor.nome}
-                      name={itemValor.nome}
+              {itemValor.map((itemValo) =>  ( 
+                  <GridColumn  key={itemValo.id}>
+                    <GridInput titulo={itemValo.metadado.legenda}
+                      name={itemValo.metadado.nome}
                       required={true}
                       width={5}
-                      handleChange={handleChange}
-                      value={itemValor.valor}  />
+                      maxLength={20}
+
+           
+                      
+                      value={itemValo.valor}  />
                   </GridColumn>
              
               ))}

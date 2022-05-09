@@ -8,12 +8,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const {
     method,
     body,
-    query: { id_dominio },
+    query: { id_dominio },s
   } = req;
   switch (method) {
     case "GET":
       try {
-        await fetch(baseDados + "?id_dominio=" + id_dominio, {
+        console.log(baseDados + "?dominioId=" + id_dominio)
+        await fetch(baseDados + "?dominioId=" + id_dominio, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

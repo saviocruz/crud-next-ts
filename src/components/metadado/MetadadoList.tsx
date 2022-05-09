@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { Button, Card, CardContent, CardHeader, CardMeta, Confirm, Container, Grid, GridColumn, GridRow, Icon, } from "semantic-ui-react";
+import { Button,Confirm, Container, Grid, GridColumn, GridRow, Icon, } from "semantic-ui-react";
 import { estadoInicialMetadado, Metadado } from "src/interfaces/interfaces";
 
 
@@ -34,8 +34,7 @@ export const MetadadoList = ({ metadados = [] }: Props) => {
         <Grid
           columns={5}
           verticalAlign="middle"
-          style={{ margin: "5px", border: "0px solid #c0c0c0", borderRadius: "10px", }}
-        >
+          style={{ margin: "5px", border: "0px solid #c0c0c0", borderRadius: "10px", }}>
           <GridRow columns={5} style={{ backgroundColor: "#c0c0c0", margin: "5px", border: "1px solid #c0c0c0", borderRadius: "5px", }}>
             <GridColumn width={3} >
               <label>Nome campo</label>
@@ -86,23 +85,20 @@ export const MetadadoList = ({ metadados = [] }: Props) => {
                 </Button>
                 <Button inverted color="red" 
                           style={{ padding: "8px" }}
-                       
                           onClick={() => {
                           setMetadado(metadado)
                           setOpenConfirm(true) }} >
                   <i aria-hidden="true" className="trash icon" style={{ margin: "auto"}}/>
                 </Button>
-                
               </GridColumn>
             </GridRow>
 
           ))}
-
         </Grid>
 
         <Confirm
           header="Remover item?"
-          content={`Você tem certeza que deseja remover   ${metadado.nome}`}
+          content={`Você tem certeza que deseja remover ${metadado.nome}`}
           open={openConfirm}
           onCancel={() => setOpenConfirm(false)}
           onConfirm={() => typeof router.query.id === "string" && handleDelete(router.query.id)} />

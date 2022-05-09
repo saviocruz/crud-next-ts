@@ -997,7 +997,10 @@
       "informacao": "/opt/wildfly;/opt/wildfly-12",
       "legenda": "WILDFLY_HOME",
       "tamanho": null,
-      "criado_em": "01/01/2020"
+      "criado_em": "01/01/2020",
+      "RESPOSTA": "sd",
+      "OBRIGATORIO": "SIM",
+      "PLACEHOLEDR": "selecion"
     },
     {
       "id": 2,
@@ -1282,7 +1285,7 @@
     {
       "id": 2,
       "dominioId": 5,
-      "nome": "LEGENDA",
+      "nome": "legenda",
       "descricao": "Legenda",
       "ativo": "NAO",
       "tipo": "INP",
@@ -1290,7 +1293,7 @@
       "legenda": "Legenda",
       "obrigatorio": "SIM",
       "ordem": "2",
-      "tamanho": "5",
+      "tamanho": "20",
       "criado_em": "01/01/2020"
     },
     {
@@ -1332,7 +1335,7 @@
       "legenda": "Placeholder",
       "obrigatorio": "NAO",
       "ordem": 4,
-      "tamanho": "5",
+      "tamanho": "25",
       "criado_em": "01/01/2020"
     },
     {
@@ -1360,7 +1363,7 @@
       "legenda": "Query validação",
       "obrigatorio": "NAO",
       "ordem": "5",
-      "tamanho": "16",
+      "tamanho": "50",
       "criado_em": "01/01/2020"
     },
     {
@@ -1374,7 +1377,7 @@
       "legenda": "Resposta Validação",
       "obrigatorio": "NAO",
       "ordem": 6,
-      "tamanho": "16",
+      "tamanho": "50",
       "criado_em": "01/01/2020"
     }
   ],

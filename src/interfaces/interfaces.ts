@@ -67,7 +67,7 @@ export const  estadoInicialMetadado  = {
 
 export interface Item {
   id: number;
-  id_dominio: number;
+  dominioId: number;
   nome?: string;
   descricao?: string;
   informacao?: string;
@@ -77,7 +77,7 @@ export interface Item {
 
 export const  estadoInicialItem  = {
   id: 0, 
-  id_dominio: 0, 
+  dominioId: 0, 
   nome: '',
   descricao: '',
   informacao: '',
@@ -87,20 +87,22 @@ export const  estadoInicialItem  = {
 
 export interface ItemValor {
   id: number;
-  id_dominio_item: number;
+  itemId: number;
   nome: string;
   tipo_form?: string;
   valor?: string;
-  id_dominio_dicionario:number;
+  metadadoId:number;
   criado_em?: string;
+  metadado?: Metadado ;
 }
 
 export const  estadoInicialItemValor  = {
   id: 0, 
-  id_dominio_item: 0, 
+  itemId: 0, 
   nome: '',
   tipo_form: '',
   valor: '',
-  id_dominio_dicionario: 0, 
-  criado_em: '01/01/2022'
+  metadadoId: 0, 
+  criado_em: '01/01/2022',
+  metadado: "" 
 };
