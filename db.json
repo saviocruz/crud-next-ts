@@ -951,7 +951,7 @@
     },
     {
       "id": 5,
-      "nome": "VARIAVEL",
+      "nome": "VARIAVEL.",
       "ativo": "SIM",
       "criado_em": "01/01/2020"
     },
@@ -1265,6 +1265,141 @@
       "legenda": null,
       "tamanho": null,
       "criado_em": "01/01/2020"
+    },
+    {
+      "id": 33,
+      "dominioId": 0,
+      "nome": "ERW",
+      "descricao": "ERWE",
+      "informacao": "",
+      "ativo": "",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 34,
+      "dominioId": 0,
+      "nome": "DQWEQW",
+      "descricao": "WEQWEQE",
+      "informacao": "",
+      "ativo": "",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 35,
+      "dominioId": 0,
+      "nome": "rewre",
+      "descricao": "ewrwrew",
+      "informacao": "",
+      "ativo": "",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 36,
+      "dominioId": 0,
+      "nome": "SDS",
+      "descricao": "DSFSDFS",
+      "informacao": "",
+      "ativo": "SIM",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 37,
+      "dominioId": 0,
+      "nome": "ERWR",
+      "descricao": "ERWRE",
+      "informacao": "",
+      "ativo": "W",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 38,
+      "dominioId": 0,
+      "nome": "SDSAD",
+      "descricao": "ASDADA",
+      "informacao": "",
+      "ativo": "SIM",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 39,
+      "dominioId": 0,
+      "nome": "SDAD",
+      "descricao": "SASDADAS",
+      "informacao": "",
+      "ativo": "SIM",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 40,
+      "dominioId": 0,
+      "nome": "sadaa",
+      "descricao": "asdasda",
+      "informacao": "",
+      "ativo": "SIM",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 41,
+      "dominioId": 0,
+      "nome": "dsfsd",
+      "descricao": "dsfsdf",
+      "informacao": "",
+      "ativo": "SIM",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 42,
+      "dominioId": 0,
+      "nome": "dsf",
+      "descricao": "dsfsdf",
+      "informacao": "",
+      "ativo": "SIM",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 43,
+      "dominioId": 0,
+      "nome": "SDSD",
+      "descricao": "SDSDS",
+      "informacao": "",
+      "ativo": "SIM",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 44,
+      "dominioId": 0,
+      "nome": "sdsada",
+      "descricao": "asda",
+      "informacao": "",
+      "ativo": "s",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 45,
+      "dominioId": 0,
+      "nome": "SADSA",
+      "descricao": "SDAS",
+      "informacao": "",
+      "ativo": "SIM",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 46,
+      "dominioId": 0,
+      "nome": "ASDA",
+      "descricao": "SADASD",
+      "informacao": "",
+      "ativo": "SIM",
+      "criado_em": "01/01/2022"
+    },
+    {
+      "id": 47,
+      "dominioId": 0,
+      "nome": "DSFS",
+      "descricao": "DFSD",
+      "informacao": "",
+      "ativo": "SIM",
+      "criado_em": "01/01/2022"
     }
   ],
   "metadados": [
@@ -1275,7 +1410,7 @@
       "descricao": "Tipo de campo",
       "ativo": "SIM",
       "tipo": "ENU",
-      "informacao": "ENU;SQL;INU",
+      "informacao": "ENU;SQL;INU;POT",
       "legenda": "Tipo",
       "obrigatorio": "SIM",
       "ordem": "1",

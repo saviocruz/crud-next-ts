@@ -8,7 +8,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const {
     method,
     body,
-    query: { id_dominio },s
+    query: { id_dominio },
   } = req;
   switch (method) {
     case "GET":

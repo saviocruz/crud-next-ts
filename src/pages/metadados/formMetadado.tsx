@@ -37,7 +37,11 @@ const NewPage = (): JSX.Element => {
   };
 
   const handleChange = ({ target: { name, value } }: ChangeInputHandler) =>
+  {
+   // console.log(name, value)
     setMetadado({ ...metadado, [name]: value });
+  }
+    
 
   const carregar = async (id: string) => {
     setLoading(true)
@@ -137,7 +141,7 @@ const NewPage = (): JSX.Element => {
             <GridRow>
 
               <GridTextarea titulo="Informação:"
-                name="ativo"
+                name="informacao"
                 required={true}
                 width={16}
                 rows={5}

@@ -1,18 +1,22 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import { FormField, GridColumn, SemanticWIDTHS } from "semantic-ui-react";
+type ChangeInputHandler = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+
+
 interface Props {
-    titulo: string;
-    name: string;
+    titulo?: string;
+    name?: string;
     required?: boolean;
     width: SemanticWIDTHS;
     maxLength?: number
     value: any;
+    handleChange?: any ;
     placeholder?: string;
-    handleChange?: any;
     autoFocus?: boolean
 }
 
-function GridInput({ titulo, name, required, width, maxLength, value, handleChange, placeholder, autoFocus }: Props) {
+function GridInput({ titulo, name, required, width, 
+    maxLength, value, handleChange, placeholder, autoFocus }: Props) {
     return (
         <React.Fragment>
             <GridColumn width={width}>
@@ -24,7 +28,7 @@ function GridInput({ titulo, name, required, width, maxLength, value, handleChan
                     <input type="text" name={name} id={name} value={value}
                         required={required}
                         maxLength={maxLength}
-                        onChange= {handleChange}
+                        onChange={handleChange}
                         placeholder={placeholder}
                         autoFocus={autoFocus} />
                 </FormField>
@@ -32,5 +36,5 @@ function GridInput({ titulo, name, required, width, maxLength, value, handleChan
         </React.Fragment>
     )
 }
-
+ 
 export default GridInput

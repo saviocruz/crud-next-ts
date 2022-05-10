@@ -81,7 +81,7 @@ export const  estadoInicialItem  = {
   nome: '',
   descricao: '',
   informacao: '',
-  ativo: '',
+  ativo: 'SIM',
   criado_em: '01/01/2022'
 };
 

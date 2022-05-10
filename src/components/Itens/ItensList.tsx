@@ -13,6 +13,15 @@ export const ItensList = ({ itens = [] }: Props) => {
   return (
 
     <div>
+      <Button primary  onClick={() => router.back()} >
+        <Icon  name="backward"  />
+      </Button>
+      <Button primary  onClick={() => router.push(`/itens/formItens/`)} >
+        <Icon  name="bookmark"  />
+        Novo
+      </Button>
+      <br/><br/>
+
       <CardGroup itemsPerRow={4}>
         {itens.map((item) => (
           <Card

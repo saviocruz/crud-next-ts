@@ -9,18 +9,20 @@ interface Props {
     value: any;
     handleChange: any;
     placeholder?: string;
-    autoFocus?: boolean
 }
 
-function GridTextarea({ titulo, name, required, width, rows, value, handleChange, placeholder, autoFocus }: Props) {
+function GridTextarea({ titulo, name, required, width, rows, value, handleChange, placeholder }: Props) {
     return (
         <React.Fragment>
             <GridColumn width={width}>
                 <FormField>
-                    <label htmlFor={name}>{titulo}</label>
+                    <label htmlFor={name}>{titulo}
+                    {(required) &&(
+                        <span style={{color:"red"}} > * </span>)}
+                    </label>
 
                     <textarea
-                        rows={5}
+                        rows={rows}
                         required={required}
                         name={name}
                         id={name}
@@ -30,6 +32,9 @@ function GridTextarea({ titulo, name, required, width, rows, value, handleChange
                 </FormField>
             </GridColumn>
         </React.Fragment>
+ 
+
+
     )
 }
 

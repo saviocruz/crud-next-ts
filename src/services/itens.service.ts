@@ -3,7 +3,7 @@ import {  Item } from 'src/interfaces/interfaces';
 import axios from 'axios'
 
 const baseApi = `${apiUrl}/itens/`;
-const baseDados = `${apiDados}/itens/`;
+//const baseDados = `${apiDados}/itens/`;
 
 
 export const itemService = {
@@ -11,6 +11,8 @@ export const itemService = {
   carregaDados,
   novo,
   atualiza,
+  carregaItens,
+  carregaItensDominio,
   carregaItemValor,
   delete: _delete
 };
@@ -32,6 +34,30 @@ async function carregaDados(id: string) {
     return item
   }
 }
+
+async function carregaItensDominio(id_dominio: string) {
+
+  if (id_dominio !== null) {
+    console.log(baseApi + "dominio/" +id_dominio)
+    const response = await fetch(baseApi + "dominio/" +id_dominio);
+    const metadado   = await response.json();
+    return metadado
+  }
+}
+
+async function carregaItens(id: string) {
+
+  if (id !== null) {
+    const re2 = await fetch(baseApi );
+    const d1 = await re2.json();
+    const itens = d1.map((iten: Item) => iten)
+
+    return itens
+  }
+}
+
+
+
 async function carregaItemValor(id_dominio_item: string) {
 
   if (id_dominio_item !== null) {
@@ -43,17 +69,17 @@ async function carregaItemValor(id_dominio_item: string) {
 }
   
 
-async function novo(item  : Item) {
+async function novo(metadado  : Item) {
 
   await fetch(baseApi, {
     method: "POST",
-    body: JSON.stringify(item),
+    body: JSON.stringify(metadado
+      ),
     headers: {
       "Content-Type": "application/json",
     },
   });
 }
-
 async function atualiza(item  : Item
   ) {
   await fetch(baseApi + item.id, {
@@ -68,7 +94,7 @@ async function atualiza(item  : Item
 // prefixed with underscored because delete is a reserved word in javascript
 async function _delete(id: string) {
   if (id !== "") {
-    axios.delete(baseDados+ id)
+    axios.delete(baseApi+ id)
     .then( (resp: any) => {
         console.log(resp.data)
     }).catch( (error: any) => {

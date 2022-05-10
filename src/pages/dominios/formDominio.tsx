@@ -47,12 +47,12 @@ const NewPage = ({ dominios }: Props): JSX.Element => {
   };
 
   const handleChange = ({ target: { name, value } }: ChangeInputHandler) =>
-    setDominio({ ...dominio, [name]: value });
+    setDominio({ ...dominio, [name]: value }); 
 
   const carregar = async (id: string) => {
     setLoading(true);
     const dominio = await dominioService.carregaDados(id);
-    const metadados = await metadadoService.carregaItemDominio(id);
+    const metadados = await metadadoService.carregaMetadadoDominio(id);
     setDominio(dominio)
     setMetadados(metadados)
     setLoading(false);
@@ -70,6 +70,8 @@ const NewPage = ({ dominios }: Props): JSX.Element => {
 
   return (
     <Layout titulo="Detalhe do cadastro" >
+
+                        
       <Container
         style={{
           padding: "1rem",
@@ -82,7 +84,7 @@ const NewPage = ({ dominios }: Props): JSX.Element => {
           Voltar
         </Button>
         <Form onSubmit={handleSubmit} loading={loading}>
-          <Grid
+        <Grid
             columns={2}
             verticalAlign="middle"
             style={{ height: "100%", margin: "5px", border: "1px solid #c0c0c0", borderRadius: "5px", }} >
@@ -91,6 +93,7 @@ const NewPage = ({ dominios }: Props): JSX.Element => {
                 name="nome"
                 required={true}
                 width={8}
+         
                 handleChange={handleChange}
                 value={dominio.nome} />
                 

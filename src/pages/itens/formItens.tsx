@@ -12,9 +12,8 @@ type ChangeInputHandler = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 
 const NewPage = (): JSX.Element => {
   const [item, setItem] = useState<Item>(estadoInicialItem);
-  const [metadados, setMetadados] = useState<Metadado[]>([]);
-  const [itemValor, setItemValor] = useState<ItemValor[]>([]);
-  const [itemValo, setItemValo] = useState<ItemValor>(estadoInicialItemValor);
+   const [itemValor, setItemValor] = useState<ItemValor[]>([]);
+  const [itemVal, setItemVal] = useState<ItemValor>(estadoInicialItemValor);
 
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -32,7 +31,10 @@ const NewPage = (): JSX.Element => {
 
     setLoading(true);
     try {
-      if (typeof router.query.id === "string") {
+   
+      setItem({ ...item,  ['dominioId'] : router.query.id });
+      console.log(item)
+       if (typeof router.query.id === "string") {
         itemService.atualiza(item)
       } else {
         itemService.novo(item)
@@ -45,31 +47,53 @@ const NewPage = (): JSX.Element => {
     setLoading(false);
   };
 
-  const handleChange = ({ target: { name, value, id } }: ChangeInputHandler) =>
-  {
-    
+  const handleChange = ({ target: { name, value, id } }: ChangeInputHandler) => {
+    //const itemVal = itemService.carregaDados(id)
     console.log(name, value, id)
-    
-    setItemValo({ ...itemValo, [name]: value });
+    setItem({ ...item, [name]: value });
+  }
+
+
+  const handleChangeI = ({ target: { name, value, id } }: ChangeInputHandler) => {
+    //const itemVal = itemService.carregaDados(id)
+
+    console.log(name, value)
+    console.log(itemVal)
+    setItemVal({ ...itemVal, [name]: value });
+
   }
 
   const carregar = async (id: string) => {
     setLoading(true)
     if (id !== null) {
       const item = await itemService.carregaDados(id)
-      const metadados = await metadadoService.carregaItemDominio(item.id_dominio)
       const itemValor = await itemService.carregaItemValor(item.id)
 
-     console.log(itemValor)
-     setItemValor(itemValor)
-
-      setMetadados(metadados)
+      setItemValor(itemValor)
+      console.log(itemValor)
+   
       setItem(item)
     }
     setLoading(false)
   };
 
+  const updateItem =(id: number, whichvalue: string, newvalue: string)=> {
+    let index:number = itemValor.findIndex(x=> x.id === id); 
+    console.log(index)
+    if (index !== -1){
+        let temporaryarray:ItemValor[] = itemValor.slice();
+         (temporaryarray as any)[index] [whichvalue] = newvalue;
+        setItemValor(temporaryarray);
+    }
+    else {
+        console.log('no match');
+    }
+}
+
+
   return (
+
+
     <Layout titulo="Detalhe do item">
       <Container
         style={{
@@ -105,30 +129,38 @@ const NewPage = (): JSX.Element => {
             </GridRow>
 
             <label>Campos Personalizados</label>
-          
-            <GridRow  > 
-              {itemValor.map((itemValo) =>  ( 
-                  <GridColumn  key={itemValo.id}>
-                    <GridInput titulo={itemValo.metadado.legenda}
-                      name={itemValo.metadado.nome}
-                      required={true}
-                      width={5}
+
+
+            <GridRow  >
+              {itemValor.map((it: ItemValor) => (
+                <GridColumn width={5} key={it.id}>
+                  <FormField>
+                    <label htmlFor={it.metadado?.nome}>{it.metadado?.legenda}
+                      {(it.metadado?.obrigatorio === 'SIM') && (
+                        <span style={{ color: "red" }} > * </span>)}
+                    </label>
+                    <input type="text"
+                      name={it.metadado?.nome}
+                      id={it.metadado?.nome}
+                      value={it.valor}
+                      required={it.metadado?.obrigatorio === 'SIM'}
                       maxLength={20}
+                      onChange={(event) => {
+                        updateItem(it.id, 'valor', event.target.value)
+                        console.log(itemValor)
+                      }
+                      }
 
-           
-                      
-                      value={itemValo.valor}  />
-                  </GridColumn>
-             
+                    />
+                  </FormField>
+                </GridColumn>
+
               ))}
-              </GridRow>
-
-
- 
+            </GridRow>
             <GridRow>
               <GridTextarea titulo="Informação:"
                 name="ativo"
-                required={true}
+                required={false}
                 width={16}
                 rows={5}
                 handleChange={handleChange}

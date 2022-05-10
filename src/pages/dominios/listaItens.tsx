@@ -5,6 +5,7 @@ import { Item, } from "src/interfaces/interfaces";
 import { ItensList } from "src/components/Itens/ItensList";
 import { dominioService } from "src/services";
 import { Button, Icon } from "semantic-ui-react";
+import { itemService } from "src/services/itens.service";
 
 const NewPage = (): JSX.Element => {
   const [itens, setItens] = useState<Item[]>([]);
@@ -16,20 +17,13 @@ const NewPage = (): JSX.Element => {
   }, [router.query]);
 
   const carregarLista = async (id: string) => {
-    const itens: Item[] = await dominioService.carregaItens(id);
+    const itens: Item[] = await itemService .carregaItensDominio(id);
     setItens(itens)
   };
  
   return (
-    <Layout titulo="Lista de ">
-       <Button primary  onClick={() => router.back()} >
-        <Icon  name="backward"  />
-      </Button>
-      <Button primary  onClick={() => router.push(`/itens/edit/`)} >
-        <Icon  name="bookmark"  />
-        Novo
-      </Button>
-      <br/><br/>
+    <Layout titulo="Lista de Itens">
+       
       <ItensList itens={itens} />
     </Layout>
   );
