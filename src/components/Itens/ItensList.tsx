@@ -1,14 +1,22 @@
 import { useRouter } from "next/router";
+import { useState } from "react";
 import { Button, Card, CardContent, CardGroup, CardHeader, CardMeta, Icon, } from "semantic-ui-react";
 
 import { Item } from "src/interfaces/interfaces";
 
 interface Props {
   itens: Item[];
+  dominioId: number
 }
 
-export const ItensList = ({ itens = [] }: Props) => {
+export const ItensList = ({ itens = [], dominioId }: Props) => {
   const router = useRouter();
+  
+  let id_dominio = router.query.id_dominio
+ 
+   console.log(router.query)
+
+   const id_d = dominioId
 
   return (
 
@@ -16,7 +24,7 @@ export const ItensList = ({ itens = [] }: Props) => {
       <Button primary  onClick={() => router.back()} >
         <Icon  name="backward"  />
       </Button>
-      <Button primary  onClick={() => router.push(`/itens/formItens/`)} >
+      <Button primary  onClick={() => router.push(`/itens/formItens/?id_dominio=${router.query.id}`)} >
         <Icon  name="bookmark"  />
         Novo
       </Button>

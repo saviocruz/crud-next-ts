@@ -38,7 +38,7 @@ async function carregaDados(id: string) {
 async function carregaItensDominio(id_dominio: string) {
 
   if (id_dominio !== null) {
-    console.log(baseApi + "dominio/" +id_dominio)
+   // console.log(baseApi + "dominio/" +id_dominio)
     const response = await fetch(baseApi + "dominio/" +id_dominio);
     const metadado   = await response.json();
     return metadado
@@ -61,7 +61,7 @@ async function carregaItens(id: string) {
 async function carregaItemValor(id_dominio_item: string) {
 
   if (id_dominio_item !== null) {
-    console.log("http://localhost:5000/itens_valores"  + "?itemId=" + id_dominio_item + "?metadadoId_ne=&_expand=metadado")
+   // console.log("http://localhost:5000/itens_valores"  + "?itemId=" + id_dominio_item + "?metadadoId_ne=&_expand=metadado")
     const response = await fetch("http://localhost:5000/itens_valores"  + "?itemId=" + id_dominio_item + "&metadadoId_ne=&_expand=metadado", );
     const metadado   = await response.json();
     return metadado

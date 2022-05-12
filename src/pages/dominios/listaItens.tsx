@@ -1,14 +1,15 @@
 import { Layout } from "src/components/Layout";
-import {    useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Item, } from "src/interfaces/interfaces";
 import { ItensList } from "src/components/Itens/ItensList";
-import { dominioService } from "src/services";
-import { Button, Icon } from "semantic-ui-react";
+
 import { itemService } from "src/services/itens.service";
 
 const NewPage = (): JSX.Element => {
   const [itens, setItens] = useState<Item[]>([]);
+  const [dominioId, setDominioId] = useState<number>(0);
+
   const router = useRouter();
 
   useEffect(() => {
@@ -17,14 +18,25 @@ const NewPage = (): JSX.Element => {
   }, [router.query]);
 
   const carregarLista = async (id: string) => {
-    const itens: Item[] = await itemService .carregaItensDominio(id);
+    const itens: Item[] = await itemService.carregaItensDominio(id);
     setItens(itens)
+    
+    
+    //console.log(itens)
+     
+   // itens.map((item) => {
+  //    setDominioId(item.dominioId)
+  //    console.log(item.dominioId)
+  //  }
+ //   )
+  //  console.log(dominioId)
+
+
   };
- 
+
   return (
     <Layout titulo="Lista de Itens">
-       
-      <ItensList itens={itens} />
+      <ItensList itens={itens} dominioId={dominioId} />
     </Layout>
   );
 };

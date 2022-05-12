@@ -66,17 +66,16 @@ export const  estadoInicialMetadado  = {
 
 
 export interface Item {
-  id: number;
+  id?: number;
   dominioId: number;
-  nome?: string;
+  nome: string;
   descricao?: string;
   informacao?: string;
   ativo:string;
-  criado_em?: string;
+  criado_em: string;
 }
 
 export const  estadoInicialItem  = {
-  id: 0, 
   dominioId: 0, 
   nome: '',
   descricao: '',

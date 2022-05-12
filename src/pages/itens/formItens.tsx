@@ -1,9 +1,8 @@
 import { Layout } from "src/components/Layout";
-import { Form, Grid, Button, Icon, GridColumn, FormField, Container, GridRow, Card } from "semantic-ui-react";
+import { Form, Grid, Button, Icon, GridColumn, FormField, Container, GridRow } from "semantic-ui-react";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { estadoInicialItem, estadoInicialItemValor, Item, ItemValor, Metadado } from "src/interfaces/interfaces";
-import { metadadoService } from "src/services";
 import GridInput from "src/components/form/GridInput";
 import GridTextarea from "src/components/form/GridTextarea";
 import { itemService } from "src/services/itens.service";
@@ -12,14 +11,15 @@ type ChangeInputHandler = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 
 const NewPage = (): JSX.Element => {
   const [item, setItem] = useState<Item>(estadoInicialItem);
-   const [itemValor, setItemValor] = useState<ItemValor[]>([]);
-  const [itemVal, setItemVal] = useState<ItemValor>(estadoInicialItemValor);
-
+  const [itemValor, setItemValor] = useState<ItemValor[]>([]);
+  const [dominioId, setDominioId] = useState<number>(0);
+  
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
-    console.log(router.query.id)
+    console.log(router.query.id_dominio)
+   // setDominioId(router.query.id_dominio)
     if (typeof router.query.id === "string")
       carregar(router.query.id);
   }, [router.query]);
@@ -31,8 +31,10 @@ const NewPage = (): JSX.Element => {
 
     setLoading(true);
     try {
-   
-      setItem({ ...item,  ['dominioId'] : router.query.id });
+      setItem({ ...item, [item.dominioId]: dominioId  });
+      item.dominioId = dominioId;
+
+      console.log(dominioId)
       console.log(item)
        if (typeof router.query.id === "string") {
         itemService.atualiza(item)
@@ -52,21 +54,17 @@ const NewPage = (): JSX.Element => {
     console.log(name, value, id)
     setItem({ ...item, [name]: value });
   }
-
-
-  const handleChangeI = ({ target: { name, value, id } }: ChangeInputHandler) => {
-    //const itemVal = itemService.carregaDados(id)
-
-    console.log(name, value)
-    console.log(itemVal)
-    setItemVal({ ...itemVal, [name]: value });
-
-  }
+ 
 
   const carregar = async (id: string) => {
     setLoading(true)
     if (id !== null) {
       const item = await itemService.carregaDados(id)
+   //   const dominioId = router.query.id  ;
+    //  setDominioId(dominioId);
+      
+
+
       const itemValor = await itemService.carregaItemValor(item.id)
 
       setItemValor(itemValor)
