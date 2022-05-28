@@ -18,7 +18,8 @@ const NewPage = (): JSX.Element => {
   const router = useRouter();
 
   const createTask = async (task: Task) =>
-    await fetch("http://localhost:5000/tasks", {
+  
+    await fetch("http://localhost:3000/api/tasks", {
       method: "POST",
       body: JSON.stringify(task),
       headers: {
@@ -86,12 +87,17 @@ const NewPage = (): JSX.Element => {
 
   return (
     <Layout>
+      <Button onClick={() => router.back()} >
+          <Icon name="arrow left" />
+          Voltar
+        </Button>
       <Grid
         centered
         columns={3}
         verticalAlign="middle"
         style={{ height: "70%" }}
       >
+        
         <Grid.Column>
           <Card>
             <Card.Content>
@@ -145,10 +151,7 @@ const NewPage = (): JSX.Element => {
 
             
           )}
-          <Button primary loading={loading} >
-                    <Icon name="save" />
-                    Voltar
-                  </Button>
+          
         </Grid.Column>
       </Grid>
 

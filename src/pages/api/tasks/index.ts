@@ -1,40 +1,39 @@
 import { NextApiRequest, NextApiResponse } from "next";
-//import { conn } from "src/utils/database";
+import { apiDados } from "config";
+const baseDados = `${apiDados}/tasks/`;
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async function (req: NextApiRequest, res: NextApiResponse) {
   const { method, body } = req;
-  console.log("respOSTA")
-  console.log(method)
+  console.log('saida')
   switch (method) {
     case "GET":
       try {
-        fetch('http://localhost:5000/tasks', {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        })
-          .then((resp) => {
-            return resp.json()
+          fetch(baseDados, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+            },
           })
-          .then((data) => {
-            return res.json(data);
-          })  
+            .then((resp) => { return resp.json()  })
+            .then((data) => {  return res.json(data);
+            })  
       } catch (error: any) {
         return res.status(400).json({ message: error.message });
       }
+      break;
     case "POST":
       try {
         const { title, description } = body;
 
-        const query =
-          "INSERT INTO tasks(title, description) VALUES ($1, $2) RETURNING *";
-        const values = [title, description];
-
-        // const response = await conn.query(query, values);
-
-        return null;//res.json(response.rows[0]);
+        await fetch("http://localhost:5000/tasks", {
+          method: "POST",
+          body: JSON.stringify({ title, description }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        break;
       } catch (error: any) {
         return res.status(400).json({ message: error.message });
       }

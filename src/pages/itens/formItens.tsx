@@ -19,9 +19,9 @@ const NewPage = (): JSX.Element => {
 
   useEffect(() => {
     console.log(router.query.id_dominio)
-   // setDominioId(router.query.id_dominio)
+    
     if (typeof router.query.id === "string")
-      carregar(router.query.id);
+      carregar(router.query.id );
   }, [router.query]);
 
 
@@ -31,10 +31,14 @@ const NewPage = (): JSX.Element => {
 
     setLoading(true);
     try {
-      setItem({ ...item, [item.dominioId]: dominioId  });
-      item.dominioId = dominioId;
+      console.log(router.query.id_dominio)
+      
+      setItem({ ...item, [item.dominioId]: router.query.id_dominio  });
+      const ix = await itemService.getAll()
+       item.dominioId = router.query.id_dominio;
+       item.id = ix.length;
 
-      console.log(dominioId)
+      
       console.log(item)
        if (typeof router.query.id === "string") {
         itemService.atualiza(item)
@@ -50,26 +54,19 @@ const NewPage = (): JSX.Element => {
   };
 
   const handleChange = ({ target: { name, value, id } }: ChangeInputHandler) => {
-    //const itemVal = itemService.carregaDados(id)
     console.log(name, value, id)
     setItem({ ...item, [name]: value });
   }
  
-
-  const carregar = async (id: string) => {
+  const carregar = async (id: string ) => {
     setLoading(true)
+  
     if (id !== null) {
-      const item = await itemService.carregaDados(id)
-   //   const dominioId = router.query.id  ;
-    //  setDominioId(dominioId);
       
-
-
+      const item = await itemService.carregaDados(id)
+     
       const itemValor = await itemService.carregaItemValor(item.id)
-
       setItemValor(itemValor)
-      console.log(itemValor)
-   
       setItem(item)
     }
     setLoading(false)
@@ -88,10 +85,7 @@ const NewPage = (): JSX.Element => {
     }
 }
 
-
   return (
-
-
     <Layout titulo="Detalhe do item">
       <Container
         style={{

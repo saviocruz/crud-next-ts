@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { Task } from "src/interfaces/Tasks";
-import { conn } from "src/utils/database";
+
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse) => {

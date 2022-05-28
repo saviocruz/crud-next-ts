@@ -12,12 +12,11 @@ interface Props {
 
 const DominioForm = ({ dominios }: Props) => {
   return (
-    <Layout titulo="Domínios cadastrados">
-      {dominios.length === 0 ? (
-          <Padrao titulo="Dominios cadastradas" msg="Não há dominios cadastradas" retorno="/dominio/new" />
-      ) : (
-        <DominioList dominios={dominios} />
-      )}
+    <Layout>
+
+      <Padrao titulo="Dominios cadastradas" msg="Não há dominios cadastradas" retorno="/dominios/formDominio" />
+      <DominioList dominios={dominios} />
+
     </Layout>
   );
 };
@@ -25,8 +24,8 @@ const DominioForm = ({ dominios }: Props) => {
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const dominios = await dominioService.getAll()
   return {
-    props: { dominios : dominios },
+    props: { dominios: dominios },
   };
 };
- 
+
 export default DominioForm;

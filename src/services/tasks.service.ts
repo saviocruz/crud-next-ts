@@ -1,12 +1,11 @@
 import { apiDados, apiUrl } from 'config';
-import { Dominio, Item, Metadado } from 'src/interfaces/interfaces';
+import { Task} from 'src/interfaces/Tasks';
 import axios from 'axios'
 
-const baseApi = `${apiUrl}/dominios/`;
-const baseDados = `${apiDados}/dominios/`;
+const baseApi = `${apiUrl}/tasks/`;
 
 
-export const dominioService = {
+export const taskService = {
   getAll,
   carregaDados,
   novo,
@@ -19,7 +18,7 @@ async function getAll() {
 
   const response = await fetch(baseApi);
   const data = await response.json();
-  const dominios = data.map((item: Dominio) => item)
+  const dominios = data.map((item: Task) => item)
   return dominios;
 }
 
@@ -40,7 +39,7 @@ async function carregaDados(id: string) {
   }
 }
 
-async function novo(dominio: Dominio) {
+async function novo(dominio: Task) {
 
   await fetch(baseApi, {
     method: "POST",
@@ -51,7 +50,7 @@ async function novo(dominio: Dominio) {
   });
 }
 
-async function atualiza(dominio: Dominio) {
+async function atualiza(dominio: Task) {
   await fetch(baseApi + dominio.id, {
     method: "PATCH",
     body: JSON.stringify(dominio),
@@ -64,7 +63,7 @@ async function atualiza(dominio: Dominio) {
 // prefixed with underscored because delete is a reserved word in javascript
 async function _delete(id: string) {
   if (id !== "") {
-    axios.delete(baseDados+ id)
+    axios.delete(baseApi+ id)
     .then( (resp: any) => {
         console.log(resp.data)
     }).catch( (error: any) => {

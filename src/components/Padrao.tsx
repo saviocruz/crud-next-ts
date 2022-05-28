@@ -13,8 +13,8 @@ export const Padrao = ({titulo,  msg, retorno}: Props) => {
 
     return (
         <Grid
-            columns={3}
-            centered
+            columns={16}
+             
             verticalAlign="middle"
             style={{ height: "70%" }
             }
@@ -22,10 +22,9 @@ export const Padrao = ({titulo,  msg, retorno}: Props) => {
             <h1> {titulo}</h1>
             <GridRow>
                 <GridColumn>
-                    <div style={{ color: "#eee", textAlign: "center" }}>
-                        <BiTaskX size="15rem" />
-                        <h1>{msg}</h1>
-                        <Button onClick={() => push(retorno)}>Create one</Button>
+                    <div style={{  textAlign: "left" }}>
+                    
+                        <Button onClick={() => push(retorno)}>Novo</Button>
                     </div>
                 </GridColumn>
             </GridRow>

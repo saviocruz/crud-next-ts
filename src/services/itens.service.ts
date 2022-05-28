@@ -69,17 +69,18 @@ async function carregaItemValor(id_dominio_item: string) {
 }
   
 
-async function novo(metadado  : Item) {
+async function novo(item: Item) {
 
   await fetch(baseApi, {
     method: "POST",
-    body: JSON.stringify(metadado
-      ),
+    body: JSON.stringify(item),
     headers: {
       "Content-Type": "application/json",
     },
   });
 }
+
+
 async function atualiza(item  : Item
   ) {
   await fetch(baseApi + item.id, {
