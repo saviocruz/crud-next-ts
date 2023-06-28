@@ -2,7 +2,7 @@ import { GetServerSideProps } from "next";
 import { Button, Grid, GridColumn, GridRow, Item } from "semantic-ui-react";
 import { Layout } from "src/components/Layout";
 import { BiTaskX } from "react-icons/bi";
-import { CategoriaList } from "src/components/categoria/CategoriaList";
+import { CategoriaList } from "src/pages/categoria/CategoriaList";
 import { useRouter } from "next/router";
 import { Categoria } from "src/interfaces/interfaces";
 import Padrao from "src/components/Padrao";

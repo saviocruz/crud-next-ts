@@ -19,12 +19,23 @@ export const Navbar = () => {
 
         <Menu.Menu position="right">
 
-        <Menu.Item>
+          <Menu.Item>
             <Button onClick={() => router.push("/task")} primary>
               Task
             </Button>
           </Menu.Item>
 
+          <Menu.Item>
+            <Button onClick={() => router.push("/posts")} primary>
+              Postagens
+            </Button>
+          </Menu.Item>
+
+          <Menu.Item>
+            <Button onClick={() => router.push("/database")} primary>
+              Install
+            </Button>
+          </Menu.Item>
 
           <Menu.Item>
             <Button onClick={() => router.push("/categoria")} primary>
@@ -37,8 +48,6 @@ export const Navbar = () => {
               Dominios
             </Button>
           </Menu.Item>
-
-
         </Menu.Menu>
       </Container>
     </Menu>

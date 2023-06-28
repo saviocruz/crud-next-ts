@@ -2,9 +2,9 @@ import { Layout } from "src/components/Layout";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Item, } from "src/interfaces/interfaces";
-import { ItensList } from "src/components/Itens/ItensList";
-
+ 
 import { itemService } from "src/services/itens.service";
+import { ItensList } from "../itens/ItensList";
 
 const NewPage = (): JSX.Element => {
   const [itens, setItens] = useState<Item[]>([]);

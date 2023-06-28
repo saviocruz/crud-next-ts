@@ -22,7 +22,7 @@
     },
     {
       "id": 3,
-      "nome": "SRH-SOLUÇÃO",
+      "nome": "SRH-SOLUÇÃO.",
       "sigla": null,
       "ativo": "SIM",
       "categoriaId": 1,
@@ -948,8 +948,7 @@
     {
       "id": "39-ZHXA",
       "title": "DT45454"
-    } 
-    
+    }
   ],
   "dominios": [
     {

@@ -35,7 +35,8 @@ const NewPage = (): JSX.Element => {
       
       setItem({ ...item, [item.dominioId]: router.query.id_dominio  });
       const ix = await itemService.getAll()
-       item.dominioId = router.query.id_dominio;
+      let idx:any = router.query.id_dominio
+       item.dominioId = parseInt( idx);
        item.id = ix.length;
 
       

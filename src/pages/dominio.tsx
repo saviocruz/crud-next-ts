@@ -1,6 +1,6 @@
 import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
-import { DominioList } from "src/components/dominio/DominioList";
+import { DominioList } from "src/pages/dominio/DominioList";
 import { Layout } from "src/components/Layout";
 import Padrao from "src/components/Padrao";
 import { Dominio } from "src/interfaces/interfaces";
@@ -13,10 +13,8 @@ interface Props {
 const DominioForm = ({ dominios }: Props) => {
   return (
     <Layout>
-
       <Padrao titulo="Dominios cadastradas" msg="Não há dominios cadastradas" retorno="/dominios/formDominio" />
       <DominioList dominios={dominios} />
-
     </Layout>
   );
 };

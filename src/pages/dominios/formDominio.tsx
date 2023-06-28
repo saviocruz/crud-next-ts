@@ -3,7 +3,7 @@ import { Form, Grid, Button, Icon, Confirm, GridColumn, FormField, Container, Gr
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Dominio, estadoInicialDominio, Item, Metadado } from "src/interfaces/interfaces";
-import { MetadadoList } from "src/components/metadado/MetadadoList";
+import { MetadadoList } from "src/pages/metadado/MetadadoList";
 import { dominioService, metadadoService } from '../../services';
 import { GetServerSideProps } from "next";
 import GridInput from "src/components/form/GridInput";
@@ -93,7 +93,6 @@ const NewPage = ({ dominios }: Props): JSX.Element => {
                 name="nome"
                 required={true}
                 width={8}
-         
                 handleChange={handleChange}
                 value={dominio.nome} />
                 

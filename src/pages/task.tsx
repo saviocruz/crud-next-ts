@@ -1,8 +1,7 @@
 import { GetServerSideProps } from "next";
 import { Button, Grid, GridColumn, GridRow, Item } from "semantic-ui-react";
 import { Layout } from "src/components/Layout";
-import { BiTaskX } from "react-icons/bi";
-import { TaskList } from "src/components/tasks/TaskList";
+import { TaskList } from "src/pages/tasks/TaskList";
 
 import { Task } from "src/interfaces/Tasks";
 import Padrao from "src/components/Padrao";
@@ -17,7 +16,7 @@ const Task = ({ tasks }: Props) => {
   return (
     <Layout titulo="">
     
-        <Padrao   msg="Não há categorias cadastradas" retorno="/tasks/new" />
+        <Padrao   msg="Não há tarefas cadastradas" retorno="/tasks/new" />
    
         <TaskList tasks={tasks} />
    
@@ -26,6 +25,7 @@ const Task = ({ tasks }: Props) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
+  console.log("getServerSideProps")
   const tasks = await taskService.getAll()
   return {
     props: { tasks: tasks },
